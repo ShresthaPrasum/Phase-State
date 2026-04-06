@@ -1,0 +1,2782 @@
+fileFormatVersion: 2
+guid: 87584536c150e364fac3ae6053128c3e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1430915962237719838
+    second: Ice_Trail_Blur_0
+  - first:
+      213: 9112512129234169090
+    second: Ice_Trail_Blur_1
+  - first:
+      213: 3343059127367461861
+    second: Ice_Trail_Blur_2
+  - first:
+      213: -7718987725199769846
+    second: Ice_Trail_Blur_3
+  - first:
+      213: -4342154241942942949
+    second: Ice_Trail_Blur_4
+  - first:
+      213: -6079378634279309359
+    second: Ice_Trail_Blur_5
+  - first:
+      213: -4662051127664930031
+    second: Ice_Trail_Blur_6
+  - first:
+      213: -5766766792335061390
+    second: Ice_Trail_Blur_7
+  - first:
+      213: 5505324886386018850
+    second: Ice_Trail_Blur_8
+  - first:
+      213: 5374586853284518903
+    second: Ice_Trail_Blur_9
+  - first:
+      213: 4620620817593636537
+    second: Ice_Trail_Blur_10
+  - first:
+      213: 138424303111317983
+    second: Ice_Trail_Blur_11
+  - first:
+      213: -5453140062859121412
+    second: Ice_Trail_Blur_12
+  - first:
+      213: 4436520666494213769
+    second: Ice_Trail_Blur_13
+  - first:
+      213: 5475937170840643560
+    second: Ice_Trail_Blur_14
+  - first:
+      213: -1255024207386863360
+    second: Ice_Trail_Blur_15
+  - first:
+      213: -1543410600983238757
+    second: Ice_Trail_Blur_16
+  - first:
+      213: -6439386572263116616
+    second: Ice_Trail_Blur_17
+  - first:
+      213: 6570923582868823301
+    second: Ice_Trail_Blur_18
+  - first:
+      213: -790037984254684265
+    second: Ice_Trail_Blur_19
+  - first:
+      213: -1190957938095350680
+    second: Ice_Trail_Blur_20
+  - first:
+      213: 7511134960960753176
+    second: Ice_Trail_Blur_21
+  - first:
+      213: -7029114138238878367
+    second: Ice_Trail_Blur_22
+  - first:
+      213: -8860680197486130826
+    second: Ice_Trail_Blur_23
+  - first:
+      213: 1219555975551506686
+    second: Ice_Trail_Blur_24
+  - first:
+      213: 5927234212219788560
+    second: Ice_Trail_Blur_25
+  - first:
+      213: -5177104793016904872
+    second: Ice_Trail_Blur_26
+  - first:
+      213: -127164948892560134
+    second: Ice_Trail_Blur_27
+  - first:
+      213: -2480367202843473913
+    second: Ice_Trail_Blur_28
+  - first:
+      213: -7123788748308086154
+    second: Ice_Trail_Blur_29
+  - first:
+      213: 977821375231082455
+    second: Ice_Trail_Blur_30
+  - first:
+      213: -8401925659838603499
+    second: Ice_Trail_Blur_31
+  - first:
+      213: -4548720009290254809
+    second: Ice_Trail_Blur_32
+  - first:
+      213: 5489293633540227274
+    second: Ice_Trail_Blur_33
+  - first:
+      213: 1525199137064630610
+    second: Ice_Trail_Blur_34
+  - first:
+      213: -6853862501544773218
+    second: Ice_Trail_Blur_35
+  - first:
+      213: 4885741163907581914
+    second: Ice_Trail_Blur_36
+  - first:
+      213: 6664218394998652120
+    second: Ice_Trail_Blur_37
+  - first:
+      213: -9216666801378153663
+    second: Ice_Trail_Blur_38
+  - first:
+      213: -3064603131080290189
+    second: Ice_Trail_Blur_39
+  - first:
+      213: 9153129118683682653
+    second: Ice_Trail_Blur_40
+  - first:
+      213: -6935387645764850587
+    second: Ice_Trail_Blur_41
+  - first:
+      213: 1852847358995669321
+    second: Ice_Trail_Blur_42
+  - first:
+      213: -4017410664991248546
+    second: Ice_Trail_Blur_43
+  - first:
+      213: -9218388991778398783
+    second: Ice_Trail_Blur_44
+  - first:
+      213: -3607889394528960655
+    second: Ice_Trail_Blur_45
+  - first:
+      213: 7892596776955724612
+    second: Ice_Trail_Blur_46
+  - first:
+      213: 4922757310119713393
+    second: Ice_Trail_Blur_47
+  - first:
+      213: 1287808399295615268
+    second: Ice_Trail_Blur_48
+  - first:
+      213: -3784028904745804203
+    second: Ice_Trail_Blur_49
+  - first:
+      213: -2611010063314819835
+    second: Ice_Trail_Blur_50
+  - first:
+      213: 6935978429992975397
+    second: Ice_Trail_Blur_51
+  - first:
+      213: 6790031063182654857
+    second: Ice_Trail_Blur_52
+  - first:
+      213: -4051884096963759931
+    second: Ice_Trail_Blur_53
+  - first:
+      213: 2026387651733703685
+    second: Ice_Trail_Blur_54
+  - first:
+      213: 8113231622362352573
+    second: Ice_Trail_Blur_55
+  - first:
+      213: -1636862885818130785
+    second: Ice_Trail_Blur_56
+  - first:
+      213: 7388499347666087017
+    second: Ice_Trail_Blur_57
+  - first:
+      213: -279271278259717709
+    second: Ice_Trail_Blur_58
+  - first:
+      213: 8985161602874985110
+    second: Ice_Trail_Blur_59
+  - first:
+      213: 8741143595833090938
+    second: Ice_Trail_Blur_60
+  - first:
+      213: -2839763002333877977
+    second: Ice_Trail_Blur_61
+  - first:
+      213: 7812210455222147123
+    second: Ice_Trail_Blur_62
+  - first:
+      213: -3949474426035027107
+    second: Ice_Trail_Blur_63
+  - first:
+      213: 1581130709704623486
+    second: Ice_Trail_Blur_64
+  - first:
+      213: 7180945025771074587
+    second: Ice_Trail_Blur_65
+  - first:
+      213: -4872104557792985113
+    second: Ice_Trail_Blur_66
+  - first:
+      213: -1403558309619871393
+    second: Ice_Trail_Blur_67
+  - first:
+      213: 2824933246933331856
+    second: Ice_Trail_Blur_68
+  - first:
+      213: 8942327293809056362
+    second: Ice_Trail_Blur_69
+  - first:
+      213: -2060287785809149042
+    second: Ice_Trail_Blur_70
+  - first:
+      213: -1533597495311109251
+    second: Ice_Trail_Blur_71
+  - first:
+      213: -4661944008436029338
+    second: Ice_Trail_Blur_72
+  - first:
+      213: 1143764935370654185
+    second: Ice_Trail_Blur_73
+  - first:
+      213: -861085861633310380
+    second: Ice_Trail_Blur_74
+  - first:
+      213: 4723766223201179120
+    second: Ice_Trail_Blur_75
+  - first:
+      213: 7092645682827002165
+    second: Ice_Trail_Blur_76
+  - first:
+      213: 7027648725586421027
+    second: Ice_Trail_Blur_77
+  - first:
+      213: -1378057613946337927
+    second: Ice_Trail_Blur_78
+  - first:
+      213: 4633277714252655081
+    second: Ice_Trail_Blur_79
+  - first:
+      213: -1974369237907851743
+    second: Ice_Trail_Blur_80
+  - first:
+      213: 4837086242543493952
+    second: Ice_Trail_Blur_81
+  - first:
+      213: -1013456865250681018
+    second: Ice_Trail_Blur_82
+  - first:
+      213: -1806472135584959737
+    second: Ice_Trail_Blur_83
+  - first:
+      213: -1877270426479145453
+    second: Ice_Trail_Blur_84
+  - first:
+      213: 3583872600068482325
+    second: Ice_Trail_Blur_85
+  - first:
+      213: 3641519517557322149
+    second: Ice_Trail_Blur_86
+  - first:
+      213: 3248704594927375862
+    second: Ice_Trail_Blur_87
+  - first:
+      213: 4234177475806764777
+    second: Ice_Trail_Blur_88
+  - first:
+      213: -7661585081145245802
+    second: Ice_Trail_Blur_89
+  - first:
+      213: 5122488073603422985
+    second: Ice_Trail_Blur_90
+  - first:
+      213: -7826212404900148658
+    second: Ice_Trail_Blur_91
+  - first:
+      213: 4925037464928588935
+    second: Ice_Trail_Blur_92
+  - first:
+      213: -4837913989950495397
+    second: Ice_Trail_Blur_93
+  - first:
+      213: 4964142073208534527
+    second: Ice_Trail_Blur_94
+  - first:
+      213: 1124087516179796459
+    second: Ice_Trail_Blur_95
+  - first:
+      213: -8514234024036414710
+    second: Ice_Trail_Blur_96
+  - first:
+      213: 3987282692910995989
+    second: Ice_Trail_Blur_97
+  - first:
+      213: 8886464139641741792
+    second: Ice_Trail_Blur_98
+  - first:
+      213: 1203877770223261660
+    second: Ice_Trail_Blur_99
+  - first:
+      213: -2654405657532696483
+    second: Ice_Trail_Blur_100
+  - first:
+      213: 5904701483354242288
+    second: Ice_Trail_Blur_101
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_0
+      rect:
+        serializedVersion: 2
+        x: 9787
+        y: 181
+        width: 21
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea626f738d542ce0800000000000000
+      internalID: -1430915962237719838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_1
+      rect:
+        serializedVersion: 2
+        x: 8798
+        y: 155
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20de07a5085267e70800000000000000
+      internalID: 9112512129234169090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_2
+      rect:
+        serializedVersion: 2
+        x: 9293
+        y: 160
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eb6dd5609ee46e20800000000000000
+      internalID: 3343059127367461861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_3
+      rect:
+        serializedVersion: 2
+        x: 8311
+        y: 137
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ffdd59f85a0e490800000000000000
+      internalID: -7718987725199769846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_4
+      rect:
+        serializedVersion: 2
+        x: 8750
+        y: 143
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b090109b19db3c0800000000000000
+      internalID: -4342154241942942949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_5
+      rect:
+        serializedVersion: 2
+        x: 9242
+        y: 147
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dfaea09755b1aba0800000000000000
+      internalID: -6079378634279309359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_6
+      rect:
+        serializedVersion: 2
+        x: 8270
+        y: 121
+        width: 37
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11392d233311d4fb0800000000000000
+      internalID: -4662051127664930031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_7
+      rect:
+        serializedVersion: 2
+        x: 8289
+        y: 0
+        width: 288
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e8950f72458ffa0800000000000000
+      internalID: -5766766792335061390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_8
+      rect:
+        serializedVersion: 2
+        x: 8830
+        y: 53
+        width: 82
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a0822d0d7d66c40800000000000000
+      internalID: 5505324886386018850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_9
+      rect:
+        serializedVersion: 2
+        x: 9309
+        y: 98
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb128c644e569a40800000000000000
+      internalID: 5374586853284518903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_10
+      rect:
+        serializedVersion: 2
+        x: 9383
+        y: 119
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6917a072ebf1040800000000000000
+      internalID: 4620620817593636537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_11
+      rect:
+        serializedVersion: 2
+        x: 9729
+        y: 117
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd92b379b28cbe100800000000000000
+      internalID: 138424303111317983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_12
+      rect:
+        serializedVersion: 2
+        x: 9804
+        y: 115
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfca4da310e8254b0800000000000000
+      internalID: -5453140062859121412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_13
+      rect:
+        serializedVersion: 2
+        x: 6783
+        y: 76
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98e111d5a00b19d30800000000000000
+      internalID: 4436520666494213769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_14
+      rect:
+        serializedVersion: 2
+        x: 7199
+        y: 81
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7605818df6efb40800000000000000
+      internalID: 5475937170840643560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_15
+      rect:
+        serializedVersion: 2
+        x: 7273
+        y: 98
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009903ef122459ee0800000000000000
+      internalID: -1255024207386863360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_16
+      rect:
+        serializedVersion: 2
+        x: 7330
+        y: 97
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9762d95c34b49ae0800000000000000
+      internalID: -1543410600983238757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_17
+      rect:
+        serializedVersion: 2
+        x: 7843
+        y: 0
+        width: 278
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b036d4a704b2a6a0800000000000000
+      internalID: -6439386572263116616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_18
+      rect:
+        serializedVersion: 2
+        x: 8735
+        y: 101
+        width: 31
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d12233f2c903b50800000000000000
+      internalID: 6570923582868823301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_19
+      rect:
+        serializedVersion: 2
+        x: 8772
+        y: 32
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7931f6d93a83905f0800000000000000
+      internalID: -790037984254684265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_20
+      rect:
+        serializedVersion: 2
+        x: 8897
+        y: 54
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c1565b01ed87fe0800000000000000
+      internalID: -1190957938095350680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_21
+      rect:
+        serializedVersion: 2
+        x: 9230
+        y: 105
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e45188379ec3860800000000000000
+      internalID: 7511134960960753176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_22
+      rect:
+        serializedVersion: 2
+        x: 9267
+        y: 57
+        width: 41
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d7890eee1937e90800000000000000
+      internalID: -7029114138238878367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_23
+      rect:
+        serializedVersion: 2
+        x: 9391
+        y: 74
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67940886e4a880580800000000000000
+      internalID: -8860680197486130826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_24
+      rect:
+        serializedVersion: 2
+        x: 9876
+        y: 100
+        width: 27
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8d372c2bbbce010800000000000000
+      internalID: 1219555975551506686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_25
+      rect:
+        serializedVersion: 2
+        x: 5234
+        y: 0
+        width: 281
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d17e7bc14c14250800000000000000
+      internalID: 5927234212219788560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_26
+      rect:
+        serializedVersion: 2
+        x: 5725
+        y: 23
+        width: 106
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8535147ce9a3728b0800000000000000
+      internalID: -5177104793016904872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_27
+      rect:
+        serializedVersion: 2
+        x: 5813
+        y: 0
+        width: 153
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af4d06917283c3ef0800000000000000
+      internalID: -127164948892560134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_28
+      rect:
+        serializedVersion: 2
+        x: 6224
+        y: 44
+        width: 91
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7084cf9ab27f39dd0800000000000000
+      internalID: -2480367202843473913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_29
+      rect:
+        serializedVersion: 2
+        x: 6292
+        y: 54
+        width: 58
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6720c2a70e7332d90800000000000000
+      internalID: -7123788748308086154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_30
+      rect:
+        serializedVersion: 2
+        x: 6352
+        y: 54
+        width: 54
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dfbe6c2c5be19d00800000000000000
+      internalID: 977821375231082455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_31
+      rect:
+        serializedVersion: 2
+        x: 6707
+        y: 63
+        width: 51
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f9410b02d566b80800000000000000
+      internalID: -8401925659838603499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_32
+      rect:
+        serializedVersion: 2
+        x: 6770
+        y: 70
+        width: 35
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726fa8f6043bfd0c0800000000000000
+      internalID: -4548720009290254809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_33
+      rect:
+        serializedVersion: 2
+        x: 6840
+        y: 71
+        width: 50
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac08af6e973ed2c40800000000000000
+      internalID: 5489293633540227274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_34
+      rect:
+        serializedVersion: 2
+        x: 9346
+        y: 58
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2593878c8889a2510800000000000000
+      internalID: 1525199137064630610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_35
+      rect:
+        serializedVersion: 2
+        x: 9767
+        y: 75
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99bd004e5032e0a0800000000000000
+      internalID: -6853862501544773218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_36
+      rect:
+        serializedVersion: 2
+        x: 9840
+        y: 73
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7073be3b3adc340800000000000000
+      internalID: 4885741163907581914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_37
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 52
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dcb48b525f0c7c50800000000000000
+      internalID: 6664218394998652120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_38
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 46
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b28ba4062d71080800000000000000
+      internalID: -9216666801378153663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_39
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 57
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 370d86270b75875d0800000000000000
+      internalID: -3064603131080290189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_40
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 55
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57dc662072760f70800000000000000
+      internalID: 9153129118683682653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_41
+      rect:
+        serializedVersion: 2
+        x: 3889
+        y: 59
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cad827ead80cf90800000000000000
+      internalID: -6935387645764850587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_42
+      rect:
+        serializedVersion: 2
+        x: 4921
+        y: 0
+        width: 160
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94125ff2bd2a6b910800000000000000
+      internalID: 1852847358995669321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_43
+      rect:
+        serializedVersion: 2
+        x: 7345
+        y: 54
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fa45c094a4f38c0800000000000000
+      internalID: -4017410664991248546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_44
+      rect:
+        serializedVersion: 2
+        x: 8963
+        y: 34
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd5da79d04b11080800000000000000
+      internalID: -9218388991778398783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_45
+      rect:
+        serializedVersion: 2
+        x: 9314
+        y: 34
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fb33a06b33eedc0800000000000000
+      internalID: -3607889394528960655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_46
+      rect:
+        serializedVersion: 2
+        x: 9448
+        y: 35
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443c6dda3f2288d60800000000000000
+      internalID: 7892596776955724612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_47
+      rect:
+        serializedVersion: 2
+        x: 9812
+        y: 52
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17a942111b5215440800000000000000
+      internalID: 4922757310119713393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_48
+      rect:
+        serializedVersion: 2
+        x: 9941
+        y: 49
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42197c28ae63fd110800000000000000
+      internalID: 1287808399295615268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_49
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 78
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ed0d082cd6c7bc0800000000000000
+      internalID: -3784028904745804203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_50
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 10
+        width: 93
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505662f5e24d3cbd0800000000000000
+      internalID: -2611010063314819835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_51
+      rect:
+        serializedVersion: 2
+        x: 3874
+        y: 26
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cb08932ab814060800000000000000
+      internalID: 6935978429992975397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_52
+      rect:
+        serializedVersion: 2
+        x: 4367
+        y: 46
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98dbeded6490b3e50800000000000000
+      internalID: 6790031063182654857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_53
+      rect:
+        serializedVersion: 2
+        x: 6346
+        y: 32
+        width: 41
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0bb61b1e0d4c7c0800000000000000
+      internalID: -4051884096963759931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_54
+      rect:
+        serializedVersion: 2
+        x: 6851
+        y: 38
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c43de35dc2f1c10800000000000000
+      internalID: 2026387651733703685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_55
+      rect:
+        serializedVersion: 2
+        x: 7230
+        y: 39
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbcf5fbc2df79070800000000000000
+      internalID: 8113231622362352573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_56
+      rect:
+        serializedVersion: 2
+        x: 7292
+        y: 37
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e1ac8b0e1b849e0800000000000000
+      internalID: -1636862885818130785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_57
+      rect:
+        serializedVersion: 2
+        x: 7472
+        y: 0
+        width: 203
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ca7d0c209398660800000000000000
+      internalID: 7388499347666087017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_58
+      rect:
+        serializedVersion: 2
+        x: 8855
+        y: 0
+        width: 154
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b93c578044df1cf0800000000000000
+      internalID: -279271278259717709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_59
+      rect:
+        serializedVersion: 2
+        x: 9378
+        y: 16
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ac7d45fd4b1bc70800000000000000
+      internalID: 8985161602874985110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_60
+      rect:
+        serializedVersion: 2
+        x: 9869
+        y: 37
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73ef40b9c7ce4970800000000000000
+      internalID: 8741143595833090938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_61
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 0
+        width: 74
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729a79758922798d0800000000000000
+      internalID: -2839763002333877977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_62
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 23
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338db16a40c8a6c60800000000000000
+      internalID: 7812210455222147123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_63
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 28
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5341ba4fe5a039c0800000000000000
+      internalID: -3949474426035027107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_64
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 0
+        width: 88
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75c767d00e41f510800000000000000
+      internalID: 1581130709704623486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_65
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 0
+        width: 109
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1471b46477d7a360800000000000000
+      internalID: 7180945025771074587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_66
+      rect:
+        serializedVersion: 2
+        x: 3859
+        y: 22
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7efff2cd7bec26cb0800000000000000
+      internalID: -4872104557792985113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_67
+      rect:
+        serializedVersion: 2
+        x: 3922
+        y: 21
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f515f8d572f858ce0800000000000000
+      internalID: -1403558309619871393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_68
+      rect:
+        serializedVersion: 2
+        x: 4357
+        y: 25
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09fe6a922dd243720800000000000000
+      internalID: 2824933246933331856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_69
+      rect:
+        serializedVersion: 2
+        x: 4419
+        y: 25
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ad4c49b47891c70800000000000000
+      internalID: 8942327293809056362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_70
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 119
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8305c7bc236863e0800000000000000
+      internalID: -2060287785809149042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_71
+      rect:
+        serializedVersion: 2
+        x: 5750
+        y: 0
+        width: 135
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d737d8f043197bae0800000000000000
+      internalID: -1533597495311109251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_72
+      rect:
+        serializedVersion: 2
+        x: 6299
+        y: 17
+        width: 38
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668e866df927d4fb0800000000000000
+      internalID: -4661944008436029338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_73
+      rect:
+        serializedVersion: 2
+        x: 6549
+        y: 0
+        width: 83
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e1c05716287fdf00800000000000000
+      internalID: 1143764935370654185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_74
+      rect:
+        serializedVersion: 2
+        x: 6740
+        y: 22
+        width: 32
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4514c3898fecc04f0800000000000000
+      internalID: -861085861633310380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_75
+      rect:
+        serializedVersion: 2
+        x: 6797
+        y: 25
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f515e73a503e8140800000000000000
+      internalID: 4723766223201179120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_76
+      rect:
+        serializedVersion: 2
+        x: 6989
+        y: 0
+        width: 105
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5318c9a8ba32e6260800000000000000
+      internalID: 7092645682827002165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_77
+      rect:
+        serializedVersion: 2
+        x: 9419
+        y: 0
+        width: 59
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3252ec62849378160800000000000000
+      internalID: 7027648725586421027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_78
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975c4b0c6e720ece0800000000000000
+      internalID: -1378057613946337927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_79
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 7
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e963cf6885bc4040800000000000000
+      internalID: 4633277714252655081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_80
+      rect:
+        serializedVersion: 2
+        x: 5953
+        y: 0
+        width: 62
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1263b0783a1a994e0800000000000000
+      internalID: -1974369237907851743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_81
+      rect:
+        serializedVersion: 2
+        x: 6087
+        y: 0
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043ebb24f48c02340800000000000000
+      internalID: 4837086242543493952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_82
+      rect:
+        serializedVersion: 2
+        x: 6244
+        y: 15
+        width: 31
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f5d8fb95a7fe1f0800000000000000
+      internalID: -1013456865250681018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_83
+      rect:
+        serializedVersion: 2
+        x: 6267
+        y: 0
+        width: 68
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70331dde92f1ee6e0800000000000000
+      internalID: -1806472135584959737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_84
+      rect:
+        serializedVersion: 2
+        x: 6339
+        y: 0
+        width: 40
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e4d5a4e7892f5e0800000000000000
+      internalID: -1877270426479145453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_85
+      rect:
+        serializedVersion: 2
+        x: 6845
+        y: 10
+        width: 24
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515665f34297cb130800000000000000
+      internalID: 3583872600068482325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_86
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 0
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1f7a625b6498230800000000000000
+      internalID: 3641519517557322149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_87
+      rect:
+        serializedVersion: 2
+        x: 2393
+        y: 0
+        width: 25
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f553d0ed97b51d20800000000000000
+      internalID: 3248704594927375862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_88
+      rect:
+        serializedVersion: 2
+        x: 3392
+        y: 0
+        width: 90
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee1c690bf1d2ca30800000000000000
+      internalID: 4234177475806764777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_89
+      rect:
+        serializedVersion: 2
+        x: 3915
+        y: 0
+        width: 34
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69fb7e526f49ca590800000000000000
+      internalID: -7661585081145245802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_90
+      rect:
+        serializedVersion: 2
+        x: 6382
+        y: 0
+        width: 43
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b9e4943cbb61740800000000000000
+      internalID: 5122488073603422985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_91
+      rect:
+        serializedVersion: 2
+        x: 6440
+        y: 0
+        width: 39
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4acb256845b36390800000000000000
+      internalID: -7826212404900148658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_92
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 0
+        width: 55
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7841f8afa7f395440800000000000000
+      internalID: 4925037464928588935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_93
+      rect:
+        serializedVersion: 2
+        x: 6883
+        y: 0
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55ab17cbd64cdcb0800000000000000
+      internalID: -4837913989950495397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_94
+      rect:
+        serializedVersion: 2
+        x: 6938
+        y: 0
+        width: 29
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff57a281aec24e440800000000000000
+      internalID: 4964142073208534527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_95
+      rect:
+        serializedVersion: 2
+        x: 7248
+        y: 0
+        width: 34
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1195ae3af899f00800000000000000
+      internalID: 1124087516179796459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_96
+      rect:
+        serializedVersion: 2
+        x: 7376
+        y: 0
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0bc3c6f34d57d980800000000000000
+      internalID: -8514234024036414710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_97
+      rect:
+        serializedVersion: 2
+        x: 8797
+        y: 0
+        width: 53
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ad502db7ca55730800000000000000
+      internalID: 3987282692910995989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_98
+      rect:
+        serializedVersion: 2
+        x: 9010
+        y: 0
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1e7907d00135b70800000000000000
+      internalID: 8886464139641741792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_99
+      rect:
+        serializedVersion: 2
+        x: 9291
+        y: 0
+        width: 36
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7952f147805b010800000000000000
+      internalID: 1203877770223261660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_100
+      rect:
+        serializedVersion: 2
+        x: 9379
+        y: 0
+        width: 26
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58f9fc3e18a92bd0800000000000000
+      internalID: -2654405657532696483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_Blur_101
+      rect:
+        serializedVersion: 2
+        x: 9913
+        y: 0
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc3d04f6b6b1f150800000000000000
+      internalID: 5904701483354242288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ice_Trail_Blur_0: -1430915962237719838
+      Ice_Trail_Blur_1: 9112512129234169090
+      Ice_Trail_Blur_10: 4620620817593636537
+      Ice_Trail_Blur_100: -2654405657532696483
+      Ice_Trail_Blur_101: 5904701483354242288
+      Ice_Trail_Blur_11: 138424303111317983
+      Ice_Trail_Blur_12: -5453140062859121412
+      Ice_Trail_Blur_13: 4436520666494213769
+      Ice_Trail_Blur_14: 5475937170840643560
+      Ice_Trail_Blur_15: -1255024207386863360
+      Ice_Trail_Blur_16: -1543410600983238757
+      Ice_Trail_Blur_17: -6439386572263116616
+      Ice_Trail_Blur_18: 6570923582868823301
+      Ice_Trail_Blur_19: -790037984254684265
+      Ice_Trail_Blur_2: 3343059127367461861
+      Ice_Trail_Blur_20: -1190957938095350680
+      Ice_Trail_Blur_21: 7511134960960753176
+      Ice_Trail_Blur_22: -7029114138238878367
+      Ice_Trail_Blur_23: -8860680197486130826
+      Ice_Trail_Blur_24: 1219555975551506686
+      Ice_Trail_Blur_25: 5927234212219788560
+      Ice_Trail_Blur_26: -5177104793016904872
+      Ice_Trail_Blur_27: -127164948892560134
+      Ice_Trail_Blur_28: -2480367202843473913
+      Ice_Trail_Blur_29: -7123788748308086154
+      Ice_Trail_Blur_3: -7718987725199769846
+      Ice_Trail_Blur_30: 977821375231082455
+      Ice_Trail_Blur_31: -8401925659838603499
+      Ice_Trail_Blur_32: -4548720009290254809
+      Ice_Trail_Blur_33: 5489293633540227274
+      Ice_Trail_Blur_34: 1525199137064630610
+      Ice_Trail_Blur_35: -6853862501544773218
+      Ice_Trail_Blur_36: 4885741163907581914
+      Ice_Trail_Blur_37: 6664218394998652120
+      Ice_Trail_Blur_38: -9216666801378153663
+      Ice_Trail_Blur_39: -3064603131080290189
+      Ice_Trail_Blur_4: -4342154241942942949
+      Ice_Trail_Blur_40: 9153129118683682653
+      Ice_Trail_Blur_41: -6935387645764850587
+      Ice_Trail_Blur_42: 1852847358995669321
+      Ice_Trail_Blur_43: -4017410664991248546
+      Ice_Trail_Blur_44: -9218388991778398783
+      Ice_Trail_Blur_45: -3607889394528960655
+      Ice_Trail_Blur_46: 7892596776955724612
+      Ice_Trail_Blur_47: 4922757310119713393
+      Ice_Trail_Blur_48: 1287808399295615268
+      Ice_Trail_Blur_49: -3784028904745804203
+      Ice_Trail_Blur_5: -6079378634279309359
+      Ice_Trail_Blur_50: -2611010063314819835
+      Ice_Trail_Blur_51: 6935978429992975397
+      Ice_Trail_Blur_52: 6790031063182654857
+      Ice_Trail_Blur_53: -4051884096963759931
+      Ice_Trail_Blur_54: 2026387651733703685
+      Ice_Trail_Blur_55: 8113231622362352573
+      Ice_Trail_Blur_56: -1636862885818130785
+      Ice_Trail_Blur_57: 7388499347666087017
+      Ice_Trail_Blur_58: -279271278259717709
+      Ice_Trail_Blur_59: 8985161602874985110
+      Ice_Trail_Blur_6: -4662051127664930031
+      Ice_Trail_Blur_60: 8741143595833090938
+      Ice_Trail_Blur_61: -2839763002333877977
+      Ice_Trail_Blur_62: 7812210455222147123
+      Ice_Trail_Blur_63: -3949474426035027107
+      Ice_Trail_Blur_64: 1581130709704623486
+      Ice_Trail_Blur_65: 7180945025771074587
+      Ice_Trail_Blur_66: -4872104557792985113
+      Ice_Trail_Blur_67: -1403558309619871393
+      Ice_Trail_Blur_68: 2824933246933331856
+      Ice_Trail_Blur_69: 8942327293809056362
+      Ice_Trail_Blur_7: -5766766792335061390
+      Ice_Trail_Blur_70: -2060287785809149042
+      Ice_Trail_Blur_71: -1533597495311109251
+      Ice_Trail_Blur_72: -4661944008436029338
+      Ice_Trail_Blur_73: 1143764935370654185
+      Ice_Trail_Blur_74: -861085861633310380
+      Ice_Trail_Blur_75: 4723766223201179120
+      Ice_Trail_Blur_76: 7092645682827002165
+      Ice_Trail_Blur_77: 7027648725586421027
+      Ice_Trail_Blur_78: -1378057613946337927
+      Ice_Trail_Blur_79: 4633277714252655081
+      Ice_Trail_Blur_8: 5505324886386018850
+      Ice_Trail_Blur_80: -1974369237907851743
+      Ice_Trail_Blur_81: 4837086242543493952
+      Ice_Trail_Blur_82: -1013456865250681018
+      Ice_Trail_Blur_83: -1806472135584959737
+      Ice_Trail_Blur_84: -1877270426479145453
+      Ice_Trail_Blur_85: 3583872600068482325
+      Ice_Trail_Blur_86: 3641519517557322149
+      Ice_Trail_Blur_87: 3248704594927375862
+      Ice_Trail_Blur_88: 4234177475806764777
+      Ice_Trail_Blur_89: -7661585081145245802
+      Ice_Trail_Blur_9: 5374586853284518903
+      Ice_Trail_Blur_90: 5122488073603422985
+      Ice_Trail_Blur_91: -7826212404900148658
+      Ice_Trail_Blur_92: 4925037464928588935
+      Ice_Trail_Blur_93: -4837913989950495397
+      Ice_Trail_Blur_94: 4964142073208534527
+      Ice_Trail_Blur_95: 1124087516179796459
+      Ice_Trail_Blur_96: -8514234024036414710
+      Ice_Trail_Blur_97: 3987282692910995989
+      Ice_Trail_Blur_98: 8886464139641741792
+      Ice_Trail_Blur_99: 1203877770223261660
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

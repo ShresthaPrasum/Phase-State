@@ -1,0 +1,1160 @@
+fileFormatVersion: 2
+guid: 806b1dd82c04bff469a7d59b468c7e11
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3935076654002521884
+    second: Ice_Trail_0
+  - first:
+      213: -9119042761916320099
+    second: Ice_Trail_1
+  - first:
+      213: 1883875056225553905
+    second: Ice_Trail_2
+  - first:
+      213: 1237160986686448808
+    second: Ice_Trail_3
+  - first:
+      213: 7664411240057349527
+    second: Ice_Trail_4
+  - first:
+      213: 8676213286795218750
+    second: Ice_Trail_5
+  - first:
+      213: 7471186054299809707
+    second: Ice_Trail_6
+  - first:
+      213: 5949678999209317997
+    second: Ice_Trail_7
+  - first:
+      213: -7588077271473149888
+    second: Ice_Trail_8
+  - first:
+      213: 1166828237709725588
+    second: Ice_Trail_9
+  - first:
+      213: -5502686630393626256
+    second: Ice_Trail_10
+  - first:
+      213: 6177812656464102099
+    second: Ice_Trail_11
+  - first:
+      213: -7003747557358937943
+    second: Ice_Trail_12
+  - first:
+      213: -3693249870237968089
+    second: Ice_Trail_13
+  - first:
+      213: 6247457428960964726
+    second: Ice_Trail_14
+  - first:
+      213: 9034412604759893019
+    second: Ice_Trail_15
+  - first:
+      213: -1456305671304590179
+    second: Ice_Trail_16
+  - first:
+      213: -2637451214089149484
+    second: Ice_Trail_17
+  - first:
+      213: -2988452222806327780
+    second: Ice_Trail_18
+  - first:
+      213: -6158777361109363847
+    second: Ice_Trail_19
+  - first:
+      213: -553737942124996054
+    second: Ice_Trail_20
+  - first:
+      213: 3031029978161971177
+    second: Ice_Trail_21
+  - first:
+      213: 8337358831442939261
+    second: Ice_Trail_22
+  - first:
+      213: -745113611851005834
+    second: Ice_Trail_23
+  - first:
+      213: 6535658520820679099
+    second: Ice_Trail_24
+  - first:
+      213: -5769058759566705117
+    second: Ice_Trail_25
+  - first:
+      213: 5000436201218461027
+    second: Ice_Trail_26
+  - first:
+      213: -6144137372407867964
+    second: Ice_Trail_27
+  - first:
+      213: -1836829468568795543
+    second: Ice_Trail_28
+  - first:
+      213: 2361087721192585605
+    second: Ice_Trail_29
+  - first:
+      213: 3961360407566203358
+    second: Ice_Trail_30
+  - first:
+      213: -248288356690542801
+    second: Ice_Trail_31
+  - first:
+      213: -8067577082346184803
+    second: Ice_Trail_32
+  - first:
+      213: 808290405011822691
+    second: Ice_Trail_33
+  - first:
+      213: -4804547882985468913
+    second: Ice_Trail_34
+  - first:
+      213: -2312588790179782918
+    second: Ice_Trail_35
+  - first:
+      213: 4004855104138100442
+    second: Ice_Trail_36
+  - first:
+      213: 2461583158567330508
+    second: Ice_Trail_37
+  - first:
+      213: 2595618986383178855
+    second: Ice_Trail_38
+  - first:
+      213: 5329867133514494096
+    second: Ice_Trail_39
+  - first:
+      213: -2934581099278973437
+    second: Ice_Trail_40
+  - first:
+      213: -4706847020792105194
+    second: Ice_Trail_41
+  - first:
+      213: -2921089084904933141
+    second: Ice_Trail_42
+  - first:
+      213: 7125816718394120315
+    second: Ice_Trail_43
+  - first:
+      213: -7277462274855470830
+    second: Ice_Trail_44
+  - first:
+      213: -7742360834018780191
+    second: Ice_Trail_45
+  - first:
+      213: 8886718188192106971
+    second: Ice_Trail_46
+  - first:
+      213: 7246020765785972775
+    second: Ice_Trail_47
+  - first:
+      213: 6530429620821539995
+    second: Ice_Trail_48
+  - first:
+      213: -8740278496350778862
+    second: Ice_Trail_49
+  - first:
+      213: 3265077984519017260
+    second: Ice_Trail_50
+  - first:
+      213: -869530070398913071
+    second: Ice_Trail_51
+  - first:
+      213: 5207735239758876165
+    second: Ice_Trail_52
+  - first:
+      213: -2366670635119439025
+    second: Ice_Trail_53
+  - first:
+      213: 6828940891076428586
+    second: Ice_Trail_54
+  - first:
+      213: -6280441787307695662
+    second: Ice_Trail_55
+  - first:
+      213: 1708958873924697983
+    second: Ice_Trail_56
+  - first:
+      213: -5415741670696004695
+    second: Ice_Trail_57
+  - first:
+      213: 2088839425168097517
+    second: Ice_Trail_58
+  - first:
+      213: 5371987548472458407
+    second: Ice_Trail_59
+  - first:
+      213: -2413032591424949346
+    second: Ice_Trail_60
+  - first:
+      213: 5105313374443533819
+    second: Ice_Trail_61
+  - first:
+      213: 8635678539846452859
+    second: Ice_Trail_62
+  - first:
+      213: 7367684952658398552
+    second: Ice_Trail_63
+  - first:
+      213: -9064185077284815635
+    second: Ice_Trail_64
+  - first:
+      213: -8235596905716102215
+    second: Ice_Trail_65
+  - first:
+      213: -3471643741933897152
+    second: Ice_Trail_66
+  - first:
+      213: 4203568011789395208
+    second: Ice_Trail_67
+  - first:
+      213: 2787598597146434489
+    second: Ice_Trail_68
+  - first:
+      213: -9045559908741262877
+    second: Ice_Trail_69
+  - first:
+      213: 1597554705542550318
+    second: Ice_Trail_70
+  - first:
+      213: 467119717938281288
+    second: Ice_Trail_71
+  - first:
+      213: 7573060432301840631
+    second: Ice_Trail_72
+  - first:
+      213: -8377820971758466697
+    second: Ice_Trail_73
+  - first:
+      213: -8414818975679992548
+    second: Ice_Trail_74
+  - first:
+      213: -8192989110206955779
+    second: Ice_Trail_75
+  - first:
+      213: 2563168640830869059
+    second: Ice_Trail_76
+  - first:
+      213: 6438670210405468641
+    second: Ice_Trail_77
+  - first:
+      213: -5299664633647485835
+    second: Ice_Trail_78
+  - first:
+      213: -1908758671933894637
+    second: Ice_Trail_79
+  - first:
+      213: -1121299423256848880
+    second: Ice_Trail_80
+  - first:
+      213: -2402584444150517764
+    second: Ice_Trail_81
+  - first:
+      213: 2073373361607025974
+    second: Ice_Trail_82
+  - first:
+      213: -1637522325163906437
+    second: Ice_Trail_83
+  - first:
+      213: 4922070550228136460
+    second: Ice_Trail_84
+  - first:
+      213: 3592961292203554572
+    second: Ice_Trail_85
+  - first:
+      213: -1314612102727769692
+    second: Ice_Trail_86
+  - first:
+      213: 1090150067448123464
+    second: Ice_Trail_87
+  - first:
+      213: -4213059904821147572
+    second: Ice_Trail_88
+  - first:
+      213: 9119079037908432043
+    second: Ice_Trail_89
+  - first:
+      213: 7243041474526936167
+    second: Ice_Trail_90
+  - first:
+      213: -1579416381296928655
+    second: Ice_Trail_91
+  - first:
+      213: 2832743655155978409
+    second: Ice_Trail_92
+  - first:
+      213: -5862889905664087611
+    second: Ice_Trail_93
+  - first:
+      213: 8318311150362017668
+    second: Ice_Trail_94
+  - first:
+      213: 2554244411857157351
+    second: Ice_Trail_95
+  - first:
+      213: -8640278811728363018
+    second: Ice_Trail_96
+  - first:
+      213: -596044089839647660
+    second: Ice_Trail_97
+  - first:
+      213: -2895249961706086464
+    second: Ice_Trail_98
+  - first:
+      213: -883462819291896075
+    second: Ice_Trail_99
+  - first:
+      213: -4607595300748000350
+    second: Ice_Trail_100
+  - first:
+      213: 1230416727625928541
+    second: Ice_Trail_101
+  - first:
+      213: 5471449299748701736
+    second: Ice_Trail_102
+  - first:
+      213: -4405373576988974583
+    second: Ice_Trail_103
+  - first:
+      213: 5666882976973108376
+    second: Ice_Trail_104
+  - first:
+      213: 6198014930076889356
+    second: Ice_Trail_105
+  - first:
+      213: -2246920174520067732
+    second: Ice_Trail_106
+  - first:
+      213: 8182830986985092062
+    second: Ice_Trail_107
+  - first:
+      213: 9067868958338647289
+    second: Ice_Trail_108
+  - first:
+      213: -2022111623845467639
+    second: Ice_Trail_109
+  - first:
+      213: -7655334852747212934
+    second: Ice_Trail_110
+  - first:
+      213: -1091189482138399847
+    second: Ice_Trail_111
+  - first:
+      213: -5300597586794736268
+    second: Ice_Trail_112
+  - first:
+      213: -8686149550200003413
+    second: Ice_Trail_113
+  - first:
+      213: 1681703696212292399
+    second: Ice_Trail_114
+  - first:
+      213: 433209326399466435
+    second: Ice_Trail_115
+  - first:
+      213: -8022073309855894266
+    second: Ice_Trail_116
+  - first:
+      213: 5643709942948116892
+    second: Ice_Trail_117
+  - first:
+      213: 912136912045651618
+    second: Ice_Trail_118
+  - first:
+      213: 6074632807834135846
+    second: Ice_Trail_119
+  - first:
+      213: -926880113865639986
+    second: Ice_Trail_120
+  - first:
+      213: 4158649440300202395
+    second: Ice_Trail_121
+  - first:
+      213: -2552526783971749784
+    second: Ice_Trail_122
+  - first:
+      213: -4469132335666793090
+    second: Ice_Trail_123
+  - first:
+      213: 4155165085992821981
+    second: Ice_Trail_124
+  - first:
+      213: -5884646549016917519
+    second: Ice_Trail_125
+  - first:
+      213: 6263918243102683004
+    second: Ice_Trail_126
+  - first:
+      213: 377426936167019806
+    second: Ice_Trail_127
+  - first:
+      213: -723026579262795656
+    second: Ice_Trail_128
+  - first:
+      213: -4098936149239171593
+    second: Ice_Trail_129
+  - first:
+      213: -1031805307924211187
+    second: Ice_Trail_130
+  - first:
+      213: 6620096938081644211
+    second: Ice_Trail_131
+  - first:
+      213: 802662341956902318
+    second: Ice_Trail_132
+  - first:
+      213: 402429625170759091
+    second: Ice_Trail_133
+  - first:
+      213: 7689487292444846664
+    second: Ice_Trail_134
+  - first:
+      213: 76548387224995057
+    second: Ice_Trail_135
+  - first:
+      213: 6399206823058869994
+    second: Ice_Trail_136
+  - first:
+      213: 5326271431449377767
+    second: Ice_Trail_137
+  - first:
+      213: 1226707539700471686
+    second: Ice_Trail_138
+  - first:
+      213: 851495845173728748
+    second: Ice_Trail_139
+  - first:
+      213: 619114351277785176
+    second: Ice_Trail_140
+  - first:
+      213: 5190660930388693414
+    second: Ice_Trail_141
+  - first:
+      213: -6281253365652184111
+    second: Ice_Trail_142
+  - first:
+      213: 600573301221394810
+    second: Ice_Trail_143
+  - first:
+      213: 247710069654032
+    second: Ice_Trail_144
+  - first:
+      213: 3060683443379409732
+    second: Ice_Trail_145
+  - first:
+      213: 8066156590169215098
+    second: Ice_Trail_146
+  - first:
+      213: 4904325757860186943
+    second: Ice_Trail_147
+  - first:
+      213: -5392639747692391836
+    second: Ice_Trail_148
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ice_Trail_0
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 0
+        width: 55
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e83f32d1acc369c0800000000000000
+      internalID: -3935076654002521884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_1
+      rect:
+        serializedVersion: 2
+        x: 3863
+        y: 0
+        width: 79
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96716c3ce6a27180800000000000000
+      internalID: -9119042761916320099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_7
+      rect:
+        serializedVersion: 2
+        x: 8283
+        y: 0
+        width: 293
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d66197be681819250800000000000000
+      internalID: 5949678999209317997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_13
+      rect:
+        serializedVersion: 2
+        x: 7854
+        y: 0
+        width: 269
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72955b98fc0febcc0800000000000000
+      internalID: -3693249870237968089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_17
+      rect:
+        serializedVersion: 2
+        x: 8736
+        y: 0
+        width: 271
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d32bc73814e56bd0800000000000000
+      internalID: -2637451214089149484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_27
+      rect:
+        serializedVersion: 2
+        x: 4923
+        y: 0
+        width: 154
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c55d62ec93abbaa0800000000000000
+      internalID: -6144137372407867964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_28
+      rect:
+        serializedVersion: 2
+        x: 5238
+        y: 0
+        width: 274
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966ccfc84554286e0800000000000000
+      internalID: -1836829468568795543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_29
+      rect:
+        serializedVersion: 2
+        x: 5728
+        y: 0
+        width: 276
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5897839d5c444c020800000000000000
+      internalID: 2361087721192585605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_39
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 0
+        width: 74
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09039294bed77f940800000000000000
+      internalID: 5329867133514494096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_42
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 0
+        width: 114
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be878f034f43677d0800000000000000
+      internalID: -2921089084904933141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_49
+      rect:
+        serializedVersion: 2
+        x: 7473
+        y: 0
+        width: 199
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ac60bf30b44b680800000000000000
+      internalID: -8740278496350778862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_52
+      rect:
+        serializedVersion: 2
+        x: 9237
+        y: 0
+        width: 236
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e8c1adb97954840800000000000000
+      internalID: 5207735239758876165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_56
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 0
+        width: 69
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f78089a0177b710800000000000000
+      internalID: 1708958873924697983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_59
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 1
+        width: 186
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7acb58c96322d8a40800000000000000
+      internalID: 5371987548472458407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_60
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 0
+        width: 103
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93fca494af238ed0800000000000000
+      internalID: -2413032591424949346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_65
+      rect:
+        serializedVersion: 2
+        x: 4373
+        y: 0
+        width: 224
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb4c719f3845bd80800000000000000
+      internalID: -8235596905716102215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_70
+      rect:
+        serializedVersion: 2
+        x: 6553
+        y: 0
+        width: 77
+        height: 131
+      alignment: 9
+      pivot: {x: 0.3520698, y: -0.25306764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e231e1d5a87ab2610800000000000000
+      internalID: 1597554705542550318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_74
+      rect:
+        serializedVersion: 2
+        x: 6717
+        y: 0
+        width: 240
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1da069a9be883b80800000000000000
+      internalID: -8414818975679992548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_76
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 24
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34e05207c44329320800000000000000
+      internalID: 2563168640830869059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_83
+      rect:
+        serializedVersion: 2
+        x: 6225
+        y: 0
+        width: 194
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a65d80f1a5649e0800000000000000
+      internalID: -1637522325163906437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_88
+      rect:
+        serializedVersion: 2
+        x: 7197
+        y: 0
+        width: 204
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48c1bb96543885c0800000000000000
+      internalID: -4213059904821147572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Trail_94
+      rect:
+        serializedVersion: 2
+        x: 9728
+        y: 0
+        width: 236
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48fbf704be3907370800000000000000
+      internalID: 8318311150362017668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 90e749be11d5249409798a4491d6eb67
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceOnImport
+        value: False
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Ice_Trail_0: -3935076654002521884
+      Ice_Trail_1: -9119042761916320099
+      Ice_Trail_10: -5502686630393626256
+      Ice_Trail_11: 6177812656464102099
+      Ice_Trail_12: -7003747557358937943
+      Ice_Trail_13: -3693249870237968089
+      Ice_Trail_14: 6247457428960964726
+      Ice_Trail_15: 9034412604759893019
+      Ice_Trail_16: -1456305671304590179
+      Ice_Trail_17: -2637451214089149484
+      Ice_Trail_18: -2988452222806327780
+      Ice_Trail_19: -6158777361109363847
+      Ice_Trail_2: 1883875056225553905
+      Ice_Trail_20: -553737942124996054
+      Ice_Trail_21: 3031029978161971177
+      Ice_Trail_22: 8337358831442939261
+      Ice_Trail_23: -745113611851005834
+      Ice_Trail_24: 6535658520820679099
+      Ice_Trail_25: -5769058759566705117
+      Ice_Trail_26: 5000436201218461027
+      Ice_Trail_27: -6144137372407867964
+      Ice_Trail_28: -1836829468568795543
+      Ice_Trail_29: 2361087721192585605
+      Ice_Trail_3: 1237160986686448808
+      Ice_Trail_30: 3961360407566203358
+      Ice_Trail_31: -248288356690542801
+      Ice_Trail_32: -8067577082346184803
+      Ice_Trail_33: 808290405011822691
+      Ice_Trail_34: -4804547882985468913
+      Ice_Trail_35: -2312588790179782918
+      Ice_Trail_36: 4004855104138100442
+      Ice_Trail_37: 2461583158567330508
+      Ice_Trail_38: 2595618986383178855
+      Ice_Trail_39: 5329867133514494096
+      Ice_Trail_4: 7664411240057349527
+      Ice_Trail_40: -2934581099278973437
+      Ice_Trail_41: -4706847020792105194
+      Ice_Trail_42: -2921089084904933141
+      Ice_Trail_43: 7125816718394120315
+      Ice_Trail_44: -7277462274855470830
+      Ice_Trail_45: -7742360834018780191
+      Ice_Trail_46: 8886718188192106971
+      Ice_Trail_47: 7246020765785972775
+      Ice_Trail_48: 6530429620821539995
+      Ice_Trail_49: -8740278496350778862
+      Ice_Trail_5: 8676213286795218750
+      Ice_Trail_50: 3265077984519017260
+      Ice_Trail_51: -869530070398913071
+      Ice_Trail_52: 5207735239758876165
+      Ice_Trail_53: -2366670635119439025
+      Ice_Trail_54: 6828940891076428586
+      Ice_Trail_55: -6280441787307695662
+      Ice_Trail_56: 1708958873924697983
+      Ice_Trail_57: -5415741670696004695
+      Ice_Trail_58: 2088839425168097517
+      Ice_Trail_59: 5371987548472458407
+      Ice_Trail_6: 7471186054299809707
+      Ice_Trail_60: -2413032591424949346
+      Ice_Trail_61: 5105313374443533819
+      Ice_Trail_62: 8635678539846452859
+      Ice_Trail_63: 7367684952658398552
+      Ice_Trail_64: -9064185077284815635
+      Ice_Trail_65: -8235596905716102215
+      Ice_Trail_66: -3471643741933897152
+      Ice_Trail_67: 4203568011789395208
+      Ice_Trail_68: 2787598597146434489
+      Ice_Trail_69: -9045559908741262877
+      Ice_Trail_7: 5949678999209317997
+      Ice_Trail_70: 1597554705542550318
+      Ice_Trail_71: 467119717938281288
+      Ice_Trail_72: 7573060432301840631
+      Ice_Trail_73: -8377820971758466697
+      Ice_Trail_74: -8414818975679992548
+      Ice_Trail_75: -8192989110206955779
+      Ice_Trail_76: 2563168640830869059
+      Ice_Trail_77: 6438670210405468641
+      Ice_Trail_78: -5299664633647485835
+      Ice_Trail_79: -1908758671933894637
+      Ice_Trail_8: -7588077271473149888
+      Ice_Trail_80: -1121299423256848880
+      Ice_Trail_81: -2402584444150517764
+      Ice_Trail_82: 2073373361607025974
+      Ice_Trail_83: -1637522325163906437
+      Ice_Trail_84: 4922070550228136460
+      Ice_Trail_85: 3592961292203554572
+      Ice_Trail_86: -1314612102727769692
+      Ice_Trail_87: 1090150067448123464
+      Ice_Trail_88: -4213059904821147572
+      Ice_Trail_89: 9119079037908432043
+      Ice_Trail_9: 1166828237709725588
+      Ice_Trail_90: 7243041474526936167
+      Ice_Trail_91: -1579416381296928655
+      Ice_Trail_92: 2832743655155978409
+      Ice_Trail_93: -5862889905664087611
+      Ice_Trail_94: 8318311150362017668
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

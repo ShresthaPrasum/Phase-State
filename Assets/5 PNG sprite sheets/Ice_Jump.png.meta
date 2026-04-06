@@ -1,0 +1,1144 @@
+fileFormatVersion: 2
+guid: c4cf71940d6669d4db31994f8738e72d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4606507313670590910
+    second: Ice_Jump_0
+  - first:
+      213: 1593565143757152755
+    second: Ice_Jump_1
+  - first:
+      213: -4618965752099208861
+    second: Ice_Jump_2
+  - first:
+      213: 257964986219016708
+    second: Ice_Jump_3
+  - first:
+      213: -6014960026991510751
+    second: Ice_Jump_4
+  - first:
+      213: 1446469218381943985
+    second: Ice_Jump_5
+  - first:
+      213: 3927067082892211533
+    second: Ice_Jump_6
+  - first:
+      213: 6759028011371637799
+    second: Ice_Jump_7
+  - first:
+      213: 1345371631605936574
+    second: Ice_Jump_8
+  - first:
+      213: -905127091480413098
+    second: Ice_Jump_9
+  - first:
+      213: 6237353690809172978
+    second: Ice_Jump_10
+  - first:
+      213: -3237256528312348898
+    second: Ice_Jump_11
+  - first:
+      213: -185509360190149546
+    second: Ice_Jump_12
+  - first:
+      213: 3241103866933450222
+    second: Ice_Jump_13
+  - first:
+      213: 2354396955666266304
+    second: Ice_Jump_14
+  - first:
+      213: -1282857586642233288
+    second: Ice_Jump_15
+  - first:
+      213: -7313669240213153661
+    second: Ice_Jump_16
+  - first:
+      213: 2035984320529984387
+    second: Ice_Jump_17
+  - first:
+      213: 5980733504328635486
+    second: Ice_Jump_18
+  - first:
+      213: -7791447332274221264
+    second: Ice_Jump_19
+  - first:
+      213: -7228541347239115825
+    second: Ice_Jump_20
+  - first:
+      213: -8196640233199678360
+    second: Ice_Jump_21
+  - first:
+      213: -3916604196897072766
+    second: Ice_Jump_22
+  - first:
+      213: 2629775255020654570
+    second: Ice_Jump_23
+  - first:
+      213: 8778607269850229343
+    second: Ice_Jump_24
+  - first:
+      213: 4979227169347742785
+    second: Ice_Jump_25
+  - first:
+      213: 4387807750756931915
+    second: Ice_Jump_26
+  - first:
+      213: 5982224661097102225
+    second: Ice_Jump_27
+  - first:
+      213: -6713031234440284691
+    second: Ice_Jump_28
+  - first:
+      213: -5632605246280375495
+    second: Ice_Jump_29
+  - first:
+      213: 5703813243609033585
+    second: Ice_Jump_30
+  - first:
+      213: 7394868454577508997
+    second: Ice_Jump_31
+  - first:
+      213: 6673978353567514615
+    second: Ice_Jump_32
+  - first:
+      213: 2368578812679481192
+    second: Ice_Jump_33
+  - first:
+      213: -6091969153517690686
+    second: Ice_Jump_34
+  - first:
+      213: 8979383191403868150
+    second: Ice_Jump_35
+  - first:
+      213: -9166086716743301138
+    second: Ice_Jump_36
+  - first:
+      213: 6468076424655634350
+    second: Ice_Jump_37
+  - first:
+      213: 8808726812991896838
+    second: Ice_Jump_38
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ice_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 1757
+        y: 80
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb11396def99def30800000000000000
+      internalID: 4606507313670590910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 2272
+        y: 93
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1e6102e0b7d1610800000000000000
+      internalID: 1593565143757152755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 32
+        width: 11
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3618e6cee1326efb0800000000000000
+      internalID: -4618965752099208861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 54
+        width: 10
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402b218c9c9749300800000000000000
+      internalID: 257964986219016708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 52
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b3ffc59b1968ca0800000000000000
+      internalID: -6014960026991510751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 63
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b451342714e21410800000000000000
+      internalID: 1446469218381943985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 54
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d457be494bebf7630800000000000000
+      internalID: 3927067082892211533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72ca8bc5a24eccd50800000000000000
+      internalID: 6759028011371637799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 84
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb172c0fe58bba210800000000000000
+      internalID: 1345371631605936574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 68
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c3ab3b4b75073f0800000000000000
+      internalID: -905127091480413098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 28
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f3072782288f8650800000000000000
+      internalID: 6237353690809172978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 31
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1fc027d654f213d0800000000000000
+      internalID: -3237256528312348898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_12
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 0
+        width: 90
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c2b534830fc6df0800000000000000
+      internalID: -185509360190149546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 31
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee596bc7bc6bafc20800000000000000
+      internalID: 3241103866933450222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 21
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8bfba9e8f7ca020800000000000000
+      internalID: 2354396955666266304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_15
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 34
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83856c262df523ee0800000000000000
+      internalID: -1282857586642233288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_16
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 35
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 388d4645390a08a90800000000000000
+      internalID: -7313669240213153661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_17
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 32
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b6471d3f4414c10800000000000000
+      internalID: 2035984320529984387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_18
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 0
+        width: 101
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5419c55f65dff250800000000000000
+      internalID: 5980733504328635486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_19
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 9
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03f41a1aee73fd390800000000000000
+      internalID: -7791447332274221264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_20
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 11
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3c69171ff0fab90800000000000000
+      internalID: -7228541347239115825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_21
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 19
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c4574b22faf3e80800000000000000
+      internalID: -8196640233199678360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_22
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 19
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2895526eb3d65a9c0800000000000000
+      internalID: -3916604196897072766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_23
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 10
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef4e9a49a6de7420800000000000000
+      internalID: 2629775255020654570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_24
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 25
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5aa5160dc0e3d970800000000000000
+      internalID: 8778607269850229343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_25
+      rect:
+        serializedVersion: 2
+        x: 2151
+        y: 0
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c22fcbab4c91540800000000000000
+      internalID: 4979227169347742785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_26
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 0
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b499296d6ef94ec30800000000000000
+      internalID: 4387807750756931915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_27
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 0
+        width: 10
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b364352a1250350800000000000000
+      internalID: 5982224661097102225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_28
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 15
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de5b511d8a586d2a0800000000000000
+      internalID: -6713031234440284691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_29
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 0
+        width: 37
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933e47f0f57f4d1b0800000000000000
+      internalID: -5632605246280375495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_30
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 0
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b2c7acce3082f40800000000000000
+      internalID: 5703813243609033585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_31
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 13
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58295d30ea9df9660800000000000000
+      internalID: 7394868454577508997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_32
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 13
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ffb90bc3fbbe9c50800000000000000
+      internalID: 6673978353567514615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_33
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 0
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867e64081e1eed020800000000000000
+      internalID: 2368578812679481192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_34
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 0
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c0e0fdd45af47ba0800000000000000
+      internalID: -6091969153517690686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_35
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 0
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffadb1107d2d9c70800000000000000
+      internalID: 8979383191403868150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_36
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 0
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee7c614f1b48bc080800000000000000
+      internalID: -9166086716743301138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_37
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 0
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf7da72d3933c950800000000000000
+      internalID: 6468076424655634350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice_Jump_38
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 0
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d37d3ad52ee3a70800000000000000
+      internalID: 8808726812991896838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ice_Jump_0: 4606507313670590910
+      Ice_Jump_1: 1593565143757152755
+      Ice_Jump_10: 6237353690809172978
+      Ice_Jump_11: -3237256528312348898
+      Ice_Jump_12: -185509360190149546
+      Ice_Jump_13: 3241103866933450222
+      Ice_Jump_14: 2354396955666266304
+      Ice_Jump_15: -1282857586642233288
+      Ice_Jump_16: -7313669240213153661
+      Ice_Jump_17: 2035984320529984387
+      Ice_Jump_18: 5980733504328635486
+      Ice_Jump_19: -7791447332274221264
+      Ice_Jump_2: -4618965752099208861
+      Ice_Jump_20: -7228541347239115825
+      Ice_Jump_21: -8196640233199678360
+      Ice_Jump_22: -3916604196897072766
+      Ice_Jump_23: 2629775255020654570
+      Ice_Jump_24: 8778607269850229343
+      Ice_Jump_25: 4979227169347742785
+      Ice_Jump_26: 4387807750756931915
+      Ice_Jump_27: 5982224661097102225
+      Ice_Jump_28: -6713031234440284691
+      Ice_Jump_29: -5632605246280375495
+      Ice_Jump_3: 257964986219016708
+      Ice_Jump_30: 5703813243609033585
+      Ice_Jump_31: 7394868454577508997
+      Ice_Jump_32: 6673978353567514615
+      Ice_Jump_33: 2368578812679481192
+      Ice_Jump_34: -6091969153517690686
+      Ice_Jump_35: 8979383191403868150
+      Ice_Jump_36: -9166086716743301138
+      Ice_Jump_37: 6468076424655634350
+      Ice_Jump_38: 8808726812991896838
+      Ice_Jump_4: -6014960026991510751
+      Ice_Jump_5: 1446469218381943985
+      Ice_Jump_6: 3927067082892211533
+      Ice_Jump_7: 6759028011371637799
+      Ice_Jump_8: 1345371631605936574
+      Ice_Jump_9: -905127091480413098
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
