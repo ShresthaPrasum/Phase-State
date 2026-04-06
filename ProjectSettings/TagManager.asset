@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - Player
@@ -16,7 +16,7 @@ TagManager:
   - Grates
   - Obstacles
   - Environment
-  - 
+  - Bone
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    uniqueID: 1528787595
     locked: 0
   m_RenderingLayers:
   - Default

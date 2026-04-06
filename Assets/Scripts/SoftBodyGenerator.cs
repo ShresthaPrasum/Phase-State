@@ -3,6 +3,10 @@ using UnityEngine.InputSystem;
 
 public class SoftBodyGenerator : MonoBehaviour
 {
+    [Header("Mode")]
+    [SerializeField] private bool fullyRigidMode = false;
+    [SerializeField] private int rigidRenderPointCount = 16;
+
     [SerializeField] private int boneCount = 8;
     [SerializeField] private float circleRadius = 1.5f;
     [SerializeField] private GameObject bonePrefab;
@@ -46,6 +50,13 @@ public class SoftBodyGenerator : MonoBehaviour
         {
             centerRb = gameObject.AddComponent<Rigidbody2D>();
         }
+
+        if (fullyRigidMode)
+        {
+            SetupRigidBody();
+            return;
+        }
+
         centerRb.bodyType = RigidbodyType2D.Kinematic;
 
         bones = new GameObject[boneCount];
@@ -85,6 +96,28 @@ public class SoftBodyGenerator : MonoBehaviour
         SetupCollisionIgnore();
     }
 
+    private void SetupRigidBody()
+    {
+        centerRb.bodyType = RigidbodyType2D.Dynamic;
+        centerRb.gravityScale = 1f;
+        centerRb.mass = Mathf.Max(0.1f, boneMass * Mathf.Max(1, boneCount));
+        centerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        CircleCollider2D centerCollider = GetComponent<CircleCollider2D>();
+        if (centerCollider == null)
+        {
+            centerCollider = gameObject.AddComponent<CircleCollider2D>();
+        }
+        centerCollider.radius = circleRadius;
+
+        PhysicsMaterial2D rigidMaterial = new PhysicsMaterial2D
+        {
+            friction = boneFriction,
+            bounciness = 0.1f
+        };
+        centerCollider.sharedMaterial = rigidMaterial;
+    }
+
     private void Update()
     {
         if (!enableKeyboardControl)
@@ -118,16 +151,30 @@ public class SoftBodyGenerator : MonoBehaviour
     {
         if (enableKeyboardControl)
         {
-            Vector2 targetPosition = centerRb.position + (moveInput * moveSpeed * Time.fixedDeltaTime);
-            centerRb.MovePosition(targetPosition);
+            if (fullyRigidMode)
+            {
+                centerRb.linearVelocity = new Vector2(moveInput.x * moveSpeed, centerRb.linearVelocity.y);
+            }
+            else
+            {
+                Vector2 targetPosition = centerRb.position + (moveInput * moveSpeed * Time.fixedDeltaTime);
+                centerRb.MovePosition(targetPosition);
+            }
 
             if (jumpRequested)
             {
-                for (int i = 0; i < boneRigidbodies.Length; i++)
+                if (fullyRigidMode)
                 {
-                    if (boneRigidbodies[i] != null)
+                    centerRb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    for (int i = 0; i < boneRigidbodies.Length; i++)
                     {
-                        boneRigidbodies[i].AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+                        if (boneRigidbodies[i] != null)
+                        {
+                            boneRigidbodies[i].AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
+                        }
                     }
                 }
 
@@ -135,7 +182,10 @@ public class SoftBodyGenerator : MonoBehaviour
             }
         }
 
-        ApplyAreaPressure();
+        if (!fullyRigidMode)
+        {
+            ApplyAreaPressure();
+        }
     }
 
     private void SetupPerimeterSprings()
@@ -270,6 +320,30 @@ public class SoftBodyGenerator : MonoBehaviour
 
     public Vector3[] GetBonePositions()
     {
+        if (fullyRigidMode)
+        {
+            int pointCount = Mathf.Max(8, rigidRenderPointCount);
+            Vector3[] rigidPoints = new Vector3[pointCount];
+            Vector3 centerPosition = transform.position;
+
+            for (int i = 0; i < pointCount; i++)
+            {
+                float angle = (Mathf.PI * 2f * i) / pointCount;
+                rigidPoints[i] = centerPosition + new Vector3(
+                    Mathf.Cos(angle) * circleRadius,
+                    Mathf.Sin(angle) * circleRadius,
+                    0f
+                );
+            }
+
+            return rigidPoints;
+        }
+
+        if (bones == null)
+        {
+            return new Vector3[0];
+        }
+
         Vector3[] positions = new Vector3[bones.Length];
         for (int i = 0; i < bones.Length; i++)
         {
@@ -294,6 +368,11 @@ public class SoftBodyGenerator : MonoBehaviour
     {
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, circleRadius);
+
+        if (fullyRigidMode)
+        {
+            return;
+        }
 
         if (Application.isPlaying && bones != null)
         {
