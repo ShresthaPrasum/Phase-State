@@ -9,6 +9,7 @@ public class PlayerInstabilityController : MonoBehaviour
     public delegate void StateChangedDelegate(PhaseState newState);
     public event StateChangedDelegate OnStateChanged;
 
+
     [Header("Physics References")]
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Collider2D mainCollider;
@@ -142,10 +143,15 @@ public class PlayerInstabilityController : MonoBehaviour
         else if (Keyboard.current[Key.A].isPressed || Keyboard.current[Key.LeftArrow].isPressed)
             horizontalInput = -1f;
 
+        if (currentState == PhaseState.Gas)
+        {
+            horizontalInput = 0f;
+        }
+
         moveInput = new Vector2(horizontalInput, 0);
         UpdateVisualsAndAnimator();
 
-        if (Keyboard.current[Key.Space].wasPressedThisFrame || Keyboard.current[Key.W].wasPressedThisFrame)
+        if (currentState == PhaseState.Solid && (Keyboard.current[Key.Space].wasPressedThisFrame || Keyboard.current[Key.W].wasPressedThisFrame))
         {
             jumpPressed = true;
         }
@@ -266,6 +272,7 @@ public class PlayerInstabilityController : MonoBehaviour
         rb.linearDamping = gasFriction;
         rb.gravityScale = gasGravityScale;
         mainCollider.isTrigger = false;
+        rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
         SafeIgnoreLayerCollision("Grates", true);
     }
@@ -293,6 +300,11 @@ public class PlayerInstabilityController : MonoBehaviour
     private void ApplyMovement()
     {
         float targetVelocityX = moveInput.x * moveSpeed;
+        if (currentState == PhaseState.Gas)
+        {
+            targetVelocityX = 0f;
+        }
+
         rb.linearVelocity = new Vector2(targetVelocityX, rb.linearVelocity.y);
 
         if (jumpPressed && (isGrounded || coyoteCounter > 0))
