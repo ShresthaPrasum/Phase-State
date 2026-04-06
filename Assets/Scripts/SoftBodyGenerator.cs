@@ -21,6 +21,7 @@ public class SoftBodyGenerator : MonoBehaviour
     [SerializeField] private float boneMass = 1f;
     [SerializeField] private float boneFriction = 0.1f;
     [SerializeField] private float boneCircleRadius = 0.25f;
+    [SerializeField] private Color boneColor = Color.black;
     
     [Header("Collision")]
     [SerializeField] private LayerMask boneLayer;
@@ -62,7 +63,10 @@ public class SoftBodyGenerator : MonoBehaviour
                 0f
             );
 
-            bones[i] = new GameObject($"Bone_{i}");
+            bones[i] = bonePrefab != null
+                ? Instantiate(bonePrefab)
+                : new GameObject($"Bone_{i}");
+            bones[i].name = $"Bone_{i}";
             bones[i].transform.position = position;
 
             boneOffsets[i] = new Vector3(
@@ -203,13 +207,21 @@ public class SoftBodyGenerator : MonoBehaviour
 
     private void SetupBonePhysics(GameObject bone, int index)
     {
-        Rigidbody2D boneRb = bone.AddComponent<Rigidbody2D>();
+        Rigidbody2D boneRb = bone.GetComponent<Rigidbody2D>();
+        if (boneRb == null)
+        {
+            boneRb = bone.AddComponent<Rigidbody2D>();
+        }
         boneRb.mass = boneMass;
         boneRb.gravityScale = 1f;
         boneRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         boneRigidbodies[index] = boneRb;
 
-        CircleCollider2D circleCollider = bone.AddComponent<CircleCollider2D>();
+        CircleCollider2D circleCollider = bone.GetComponent<CircleCollider2D>();
+        if (circleCollider == null)
+        {
+            circleCollider = bone.AddComponent<CircleCollider2D>();
+        }
         circleCollider.radius = boneCircleRadius;
 
         PhysicsMaterial2D material = new PhysicsMaterial2D
@@ -219,6 +231,12 @@ public class SoftBodyGenerator : MonoBehaviour
         };
         circleCollider.sharedMaterial = material;
         circleCollider.usedByEffector = false;
+
+        SpriteRenderer spriteRenderer = bone.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = boneColor;
+        }
     }
 
     private void SetupSpringJoint(GameObject bone)

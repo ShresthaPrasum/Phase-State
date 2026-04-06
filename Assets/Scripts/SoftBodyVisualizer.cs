@@ -24,7 +24,6 @@ public class SoftBodyVisualizer : MonoBehaviour
     private void OnValidate()
     {
         EnsureLineRenderer();
-        SetupLineRenderer();
     }
 
     private void EnsureLineRenderer()
@@ -47,14 +46,13 @@ public class SoftBodyVisualizer : MonoBehaviour
             return;
         }
 
-        outlineRenderer.material = new Material(Shader.Find("Sprites/Default"));
-        outlineRenderer.startColor = Color.white;
-        outlineRenderer.endColor = Color.white;
-        outlineRenderer.startWidth = 0.15f;
-        outlineRenderer.endWidth = 0.15f;
+        if (outlineRenderer.material == null)
+        {
+            outlineRenderer.material = new Material(Shader.Find("Sprites/Default"));
+        }
+
         outlineRenderer.positionCount = 0;
         outlineRenderer.loop = true;
-        outlineRenderer.sortingOrder = 1;
         outlineRenderer.useWorldSpace = true;
     }
 
