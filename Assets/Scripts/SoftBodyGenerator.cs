@@ -32,6 +32,8 @@ public class SoftBodyGenerator : MonoBehaviour
     
     [Header("Collision")]
     [SerializeField] private LayerMask boneLayer;
+    [SerializeField] private LayerMask groundLayers = -1;
+    [SerializeField] private float groundCheckDistance = 0.08f;
 
     [Header("Controls")]
     [SerializeField] private bool enableKeyboardControl = true;
@@ -45,6 +47,7 @@ public class SoftBodyGenerator : MonoBehaviour
     private Vector2 moveInput;
     private bool jumpRequested;
     private float targetArea;
+    private bool isGrounded;
 
     private void Start()
     {
@@ -54,8 +57,6 @@ public class SoftBodyGenerator : MonoBehaviour
             centerRb = gameObject.AddComponent<Rigidbody2D>();
         }
         centerRb.bodyType = RigidbodyType2D.Dynamic;
-        centerRb.gravityScale = 1f;
-        centerRb.freezeRotation = true;
 
         bones = new GameObject[boneCount];
         boneRigidbodies = new Rigidbody2D[boneCount];
@@ -125,16 +126,15 @@ public class SoftBodyGenerator : MonoBehaviour
 
     private void FixedUpdate()
     {
+        UpdateGroundedState();
+
         if (enableKeyboardControl)
         {
-            Vector2 currentVelocity = centerRb.linearVelocity;
-            currentVelocity.x = moveInput.x * moveSpeed;
-            centerRb.linearVelocity = currentVelocity;
+            Vector2 targetPosition = centerRb.position + (moveInput * moveSpeed * Time.fixedDeltaTime);
+            centerRb.MovePosition(targetPosition);
 
-            if (jumpRequested)
+            if (jumpRequested && isGrounded)
             {
-                centerRb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
-
                 for (int i = 0; i < boneRigidbodies.Length; i++)
                 {
                     if (boneRigidbodies[i] != null)
@@ -145,9 +145,43 @@ public class SoftBodyGenerator : MonoBehaviour
 
                 jumpRequested = false;
             }
+            else if (jumpRequested)
+            {
+                jumpRequested = false;
+            }
         }
 
         ApplyAreaPressure();
+    }
+
+    private void UpdateGroundedState()
+    {
+        if (boneRigidbodies == null || boneRigidbodies.Length == 0)
+        {
+            isGrounded = false;
+            return;
+        }
+
+        float lowestY = float.MaxValue;
+        Vector2 lowestPoint = centerRb.position;
+
+        for (int i = 0; i < boneRigidbodies.Length; i++)
+        {
+            if (boneRigidbodies[i] == null)
+            {
+                continue;
+            }
+
+            float candidateY = boneRigidbodies[i].position.y - boneCircleRadius;
+            if (candidateY < lowestY)
+            {
+                lowestY = candidateY;
+                lowestPoint = new Vector2(boneRigidbodies[i].position.x, candidateY + 0.01f);
+            }
+        }
+
+        RaycastHit2D hit = Physics2D.Raycast(lowestPoint, Vector2.down, groundCheckDistance, groundLayers);
+        isGrounded = hit.collider != null;
     }
 
     private void SetupPerimeterSprings()

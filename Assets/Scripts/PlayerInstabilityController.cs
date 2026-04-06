@@ -307,7 +307,7 @@ public class PlayerInstabilityController : MonoBehaviour
 
         rb.linearVelocity = new Vector2(targetVelocityX, rb.linearVelocity.y);
 
-        if (jumpPressed && (isGrounded || coyoteCounter > 0))
+        if (jumpPressed && isGrounded)
         {
             float jumpForce = currentState switch
             {
@@ -318,7 +318,6 @@ public class PlayerInstabilityController : MonoBehaviour
             };
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            coyoteCounter = 0;
             jumpPressed = false;
         }
         else
