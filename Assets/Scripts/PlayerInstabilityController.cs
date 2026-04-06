@@ -51,6 +51,8 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private float groundDrag = 1f;
     [SerializeField] private float airDrag = 0.5f;
     [SerializeField] private float coyoteTime = 0.1f;
+    [SerializeField] private LayerMask groundLayers = -1;
+    [SerializeField] private float groundCheckExtraDistance = 0.08f;
 
     private PhaseState currentState = PhaseState.Solid;
     private float instabilityValue = 0f;
@@ -75,7 +77,6 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private string speedParameterName = "speed";
 
     private const float GROUND_CHECK_DISTANCE = 0.1f;
-    private const string GROUND_LAYER_NAME = "Ground";
     private const string PLAYER_LAYER_NAME = "Player";
 
     private void Awake()
@@ -112,11 +113,11 @@ public class PlayerInstabilityController : MonoBehaviour
 
     private void Update()
     {
+        UpdateGroundedState();
+        UpdateCoyoteTime();
         HandleInput();
         UpdateInstability();
-        UpdateCoyoteTime();
         UpdateStunCounter();
-        UpdateGroundedState();
     }
 
     private void FixedUpdate()
@@ -318,11 +319,19 @@ public class PlayerInstabilityController : MonoBehaviour
 
     private void UpdateGroundedState()
     {
+        Vector2 rayOrigin = mainCollider != null
+            ? new Vector2(mainCollider.bounds.center.x, mainCollider.bounds.min.y + 0.01f)
+            : (Vector2)transform.position;
+
+        float rayDistance = mainCollider != null
+            ? groundCheckExtraDistance
+            : GROUND_CHECK_DISTANCE;
+
         RaycastHit2D hit = Physics2D.Raycast(
-            transform.position,
+            rayOrigin,
             Vector2.down,
-            GROUND_CHECK_DISTANCE,
-            LayerMask.GetMask(GROUND_LAYER_NAME)
+            rayDistance,
+            groundLayers
         );
 
         isGrounded = hit.collider != null;
