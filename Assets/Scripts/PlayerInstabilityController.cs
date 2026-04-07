@@ -42,6 +42,11 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private float gasJumpForce = 2f;
     [SerializeField] private LayerMask gasCollisionMask;
 
+    [Header("Gas Usage")]
+    [SerializeField] private bool limitGasSwitches = false;
+    [SerializeField, Min(1)] private int maxGasSwitches = 3;
+    [SerializeField] private bool resetGasSwitchesOnResetPlayer = true;
+
     [Header("Instability System")]
     [SerializeField] private float maxInstability = 100f;
     [SerializeField] private float liquidInstabilityGainPerSecond = 15f;
@@ -55,6 +60,10 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.1f;
     [SerializeField] private LayerMask groundLayers = -1;
     [SerializeField] private float groundCheckExtraDistance = 0.08f;
+
+    [Header("Respawn")]
+    [SerializeField] private Key manualRespawnKey = Key.R;
+    [SerializeField] private Transform checkpointTransform;
 
     [Header("Instability HUD")]
     [SerializeField] private bool showInstabilityHud = true;
@@ -70,6 +79,7 @@ public class PlayerInstabilityController : MonoBehaviour
     private Vector2 moveInput = Vector2.zero;
     private bool isGrounded = false;
     private bool jumpPressed = false;
+    private int gasSwitchesRemaining;
 
     [Header("Visual References")]
     [SerializeField] private SpriteRenderer playerBodySpriteRenderer;
@@ -134,6 +144,8 @@ public class PlayerInstabilityController : MonoBehaviour
             fluidPresentationRigidbody = null;
         }
 
+        gasSwitchesRemaining = maxGasSwitches;
+
         ApplyPhaseState(PhaseState.Solid);
         ApplyModePresentation(currentState);
     }
@@ -178,6 +190,11 @@ public class PlayerInstabilityController : MonoBehaviour
 
         moveInput = new Vector2(horizontalInput, 0);
         UpdateVisualsAndAnimator();
+
+        if (Keyboard.current[manualRespawnKey].wasPressedThisFrame)
+        {
+            TeleportToCheckpoint();
+        }
 
         if (currentState == PhaseState.Solid && (Keyboard.current[Key.Space].wasPressedThisFrame || Keyboard.current[Key.W].wasPressedThisFrame))
         {
@@ -251,6 +268,12 @@ public class PlayerInstabilityController : MonoBehaviour
     {
         if (currentState == newState) return;
 
+        if (newState == PhaseState.Gas && limitGasSwitches && gasSwitchesRemaining <= 0)
+        {
+            Debug.Log("[Phase State] Gas switch blocked: no gas switches remaining.");
+            return;
+        }
+
         PhaseState oldState = currentState;
         Vector2 handoffPosition = ReadActivePresentationPosition(oldState);
 
@@ -268,6 +291,11 @@ public class PlayerInstabilityController : MonoBehaviour
             {
                 softBody.FreezeHorizontalMovement();
             }
+        }
+
+        if (newState == PhaseState.Gas && oldState != PhaseState.Gas && limitGasSwitches)
+        {
+            gasSwitchesRemaining = Mathf.Max(0, gasSwitchesRemaining - 1);
         }
 
         OnStateChanged?.Invoke(newState);
@@ -636,7 +664,11 @@ public class PlayerInstabilityController : MonoBehaviour
 
     private void UpdateInstability()
     {
-        if (stunCounter > 0) return;
+        if (stunCounter > 0)
+        {
+            instabilityValue = Mathf.Max(0f, instabilityValue - solidInstabilityCooldownPerSecond * Time.deltaTime);
+            return;
+        }
 
         if (currentState == PhaseState.Solid && isGrounded && moveInput.magnitude < 0.01f)
         {
@@ -661,12 +693,12 @@ public class PlayerInstabilityController : MonoBehaviour
 
     private void TriggerInstabilityReset()
     {
-        instabilityValue = 0;
+        instabilityValue = maxInstability;
         stunCounter = instabilityResetStunDuration;
 
         TransitionToState(PhaseState.Solid);
 
-        Debug.Log("[Instability] RESET TRIGGERED! Player is stunned and forced to Solid.");
+        Debug.Log("[Instability] MAX REACHED! Player is stunned and forced to Solid. Instability will cooldown.");
     }
 
     private void UpdateStunCounter()
@@ -791,6 +823,42 @@ public class PlayerInstabilityController : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         instabilityValue = 0;
         stunCounter = 0;
+
+        if (resetGasSwitchesOnResetPlayer)
+        {
+            gasSwitchesRemaining = maxGasSwitches;
+        }
+
         TransitionToState(PhaseState.Solid);
+    }
+
+    private void TeleportToCheckpoint()
+    {
+        if (checkpointTransform == null)
+        {
+            Debug.LogWarning("[PlayerInstabilityController] Manual respawn requested, but checkpointTransform is not assigned.");
+            return;
+        }
+
+        if (resetGasSwitchesOnResetPlayer)
+        {
+            gasSwitchesRemaining = maxGasSwitches;
+        }
+
+        Vector2 checkpointPosition = checkpointTransform.position;
+        SetSolidPosition(checkpointPosition, true);
+        SetFluidPosition(checkpointPosition, true);
+
+        isLiquidFrozenFromGasTransition = false;
+        SoftBodyGenerator softBody = GetFluidSoftBody();
+        if (softBody != null)
+        {
+            softBody.UnfreezeHorizontalMovement();
+        }
+    }
+
+    public int GetGasSwitchesRemaining()
+    {
+        return limitGasSwitches ? gasSwitchesRemaining : int.MaxValue;
     }
 }
