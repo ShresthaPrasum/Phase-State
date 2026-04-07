@@ -155,6 +155,12 @@ public class CameraFollow2D : MonoBehaviour
         targetRigidbody = target != null ? target.GetComponent<Rigidbody2D>() : null;
     }
 
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+        CacheTargetRigidbody();
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (!useDeadZone)

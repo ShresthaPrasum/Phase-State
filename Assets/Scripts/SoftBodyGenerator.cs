@@ -48,6 +48,9 @@ public class SoftBodyGenerator : MonoBehaviour
     private bool jumpRequested;
     private float targetArea;
     private bool isGrounded;
+    private bool hasInitialized;
+    private bool externalFollowEnabled;
+    private Vector2 externalFollowTarget;
 
     private void Start()
     {
@@ -93,6 +96,29 @@ public class SoftBodyGenerator : MonoBehaviour
         targetArea = ComputePolygonArea();
 
         SetupCollisionIgnore();
+        hasInitialized = true;
+        SnapToPosition(transform.position, true);
+    }
+
+    private void OnEnable()
+    {
+        if (!hasInitialized || bones == null)
+        {
+            return;
+        }
+
+        SetBonesActive(true);
+        SnapToPosition(transform.position, true);
+    }
+
+    private void OnDisable()
+    {
+        if (!hasInitialized || bones == null)
+        {
+            return;
+        }
+
+        SetBonesActive(false);
     }
 
     private void Update()
@@ -126,9 +152,14 @@ public class SoftBodyGenerator : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (externalFollowEnabled)
+        {
+            centerRb.MovePosition(externalFollowTarget);
+        }
+
         UpdateGroundedState();
 
-        if (enableKeyboardControl)
+        if (enableKeyboardControl && !externalFollowEnabled)
         {
             Vector2 targetPosition = centerRb.position + (moveInput * moveSpeed * Time.fixedDeltaTime);
             centerRb.MovePosition(targetPosition);
@@ -339,6 +370,75 @@ public class SoftBodyGenerator : MonoBehaviour
             return bones[index];
         }
         return null;
+    }
+
+    public void SnapToPosition(Vector3 worldPosition, bool resetVelocity)
+    {
+        if (!hasInitialized || centerRb == null || bones == null || boneRigidbodies == null)
+        {
+            return;
+        }
+
+        centerRb.position = worldPosition;
+        if (resetVelocity)
+        {
+            centerRb.linearVelocity = Vector2.zero;
+            centerRb.angularVelocity = 0f;
+        }
+
+        for (int i = 0; i < bones.Length; i++)
+        {
+            if (bones[i] == null || boneRigidbodies[i] == null)
+            {
+                continue;
+            }
+
+            Vector3 spawnPos = worldPosition + boneOffsets[i];
+            bones[i].transform.position = spawnPos;
+            boneRigidbodies[i].position = spawnPos;
+
+            if (resetVelocity)
+            {
+                boneRigidbodies[i].linearVelocity = Vector2.zero;
+                boneRigidbodies[i].angularVelocity = 0f;
+            }
+        }
+
+        targetArea = ComputePolygonArea();
+    }
+
+    public void SetExternalFollowTarget(Vector3 worldPosition)
+    {
+        externalFollowTarget = worldPosition;
+        externalFollowEnabled = true;
+
+        if (centerRb != null && centerRb.bodyType != RigidbodyType2D.Kinematic)
+        {
+            centerRb.bodyType = RigidbodyType2D.Kinematic;
+            centerRb.linearVelocity = Vector2.zero;
+            centerRb.angularVelocity = 0f;
+        }
+    }
+
+    public void ClearExternalFollowTarget()
+    {
+        externalFollowEnabled = false;
+
+        if (centerRb != null && centerRb.bodyType != RigidbodyType2D.Dynamic)
+        {
+            centerRb.bodyType = RigidbodyType2D.Dynamic;
+        }
+    }
+
+    private void SetBonesActive(bool active)
+    {
+        for (int i = 0; i < bones.Length; i++)
+        {
+            if (bones[i] != null)
+            {
+                bones[i].SetActive(active);
+            }
+        }
     }
 
     private void OnDrawGizmos()

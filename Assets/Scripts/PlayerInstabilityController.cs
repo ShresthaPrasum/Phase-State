@@ -77,13 +77,19 @@ public class PlayerInstabilityController : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private string speedParameterName = "speed";
 
+    [Header("Mode Presentation")]
+    [SerializeField] private GameObject solidVisualRoot;
+    [SerializeField] private Collider2D[] solidOnlyColliders;
+    [SerializeField] private GameObject fluidPlayerRoot;
+    [SerializeField] private bool useFluidPresentationForLiquid = true;
+    [SerializeField] private bool useFluidPresentationForGas = false;
+    private SoftBodyGenerator cachedFluidSoftBody;
+
     private const float GROUND_CHECK_DISTANCE = 0.1f;
     private const string PLAYER_LAYER_NAME = "Player";
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        mainCollider = GetComponent<Collider2D>();
         spriteRenderer = playerBodySpriteRenderer != null ? playerBodySpriteRenderer : GetComponent<SpriteRenderer>();
         animator = playerAnimator != null ? playerAnimator : GetComponent<Animator>();
         if (animator == null)
@@ -104,12 +110,13 @@ public class PlayerInstabilityController : MonoBehaviour
 
         if (rb == null || mainCollider == null)
         {
-            Debug.LogError("PlayerInstabilityController requires Rigidbody2D and a Collider2D (BoxCollider2D, PolygonCollider2D, CircleCollider2D, etc.)!");
+            Debug.LogError("PlayerInstabilityController requires manual Inspector assignment for Rigidbody2D and Collider2D references.");
             enabled = false;
             return;
         }
 
         ApplyPhaseState(PhaseState.Solid);
+        ApplyModePresentation(currentState);
     }
 
     private void Update()
@@ -126,6 +133,7 @@ public class PlayerInstabilityController : MonoBehaviour
         if (stunCounter > 0) return;
 
         ApplyMovement();
+        SyncFluidPresentationTransform();
     }
 
     private void HandleInput()
@@ -149,6 +157,10 @@ public class PlayerInstabilityController : MonoBehaviour
         }
 
         moveInput = new Vector2(horizontalInput, 0);
+        if (Mathf.Abs(horizontalInput) > 0)
+        {
+            Debug.Log($"[DEBUG] HandleInput: moveInput set to {moveInput}, currentState={currentState}");
+        }
         UpdateVisualsAndAnimator();
 
         if (currentState == PhaseState.Solid && (Keyboard.current[Key.Space].wasPressedThisFrame || Keyboard.current[Key.W].wasPressedThisFrame))
@@ -225,6 +237,7 @@ public class PlayerInstabilityController : MonoBehaviour
 
         currentState = newState;
         ApplyPhaseState(newState);
+        ApplyModePresentation(newState);
         OnStateChanged?.Invoke(newState);
 
         Debug.Log($"[Phase State] Transitioned to: {newState} | Instability: {instabilityValue:F1}%");
@@ -244,6 +257,88 @@ public class PlayerInstabilityController : MonoBehaviour
                 ApplyGasState();
                 break;
         }
+    }
+
+    private void ApplyModePresentation(PhaseState state)
+    {
+        bool useFluid = (state == PhaseState.Liquid && useFluidPresentationForLiquid) ||
+                        (state == PhaseState.Gas && useFluidPresentationForGas);
+        Vector3 exactPlayerPosition = rb != null ? (Vector3)rb.position : transform.position;
+        SoftBodyGenerator softBody = GetFluidSoftBody();
+
+        Debug.Log($"[DEBUG] ApplyModePresentation: useFluid={useFluid}, softBody={softBody}, fluidPlayerRoot={fluidPlayerRoot}");
+
+        if (solidVisualRoot != null)
+        {
+            solidVisualRoot.SetActive(!useFluid);
+        }
+
+        if (solidOnlyColliders != null)
+        {
+            for (int i = 0; i < solidOnlyColliders.Length; i++)
+            {
+                if (solidOnlyColliders[i] != null)
+                {
+                    solidOnlyColliders[i].enabled = !useFluid;
+                }
+            }
+        }
+
+        if (fluidPlayerRoot != null)
+        {
+            fluidPlayerRoot.SetActive(useFluid);
+            if (useFluid)
+            {
+                fluidPlayerRoot.transform.position = exactPlayerPosition;
+                if (softBody != null)
+                {
+                    softBody.SnapToPosition(exactPlayerPosition, true);
+                    // Let the fluid player control itself with keyboard
+                }
+            }
+            else if (softBody != null)
+            {
+                softBody.ClearExternalFollowTarget();
+            }
+        }
+    }
+
+    private void SyncFluidPresentationTransform()
+    {
+        if (fluidPlayerRoot != null && fluidPlayerRoot.activeSelf)
+        {
+            Vector3 exactPlayerPosition = rb != null ? (Vector3)rb.position : transform.position;
+            SoftBodyGenerator softBody = GetFluidSoftBody();
+            if (softBody != null)
+            {
+                // Don't use external follow - let the fluid player control itself with keyboard
+                softBody.ClearExternalFollowTarget();
+            }
+            else
+            {
+                fluidPlayerRoot.transform.position = exactPlayerPosition;
+            }
+        }
+    }
+
+    private SoftBodyGenerator GetFluidSoftBody()
+    {
+        if (fluidPlayerRoot == null)
+        {
+            cachedFluidSoftBody = null;
+            return null;
+        }
+
+        if (cachedFluidSoftBody == null)
+        {
+            cachedFluidSoftBody = fluidPlayerRoot.GetComponent<SoftBodyGenerator>();
+            if (cachedFluidSoftBody == null)
+            {
+                cachedFluidSoftBody = fluidPlayerRoot.GetComponentInChildren<SoftBodyGenerator>(true);
+            }
+        }
+
+        return cachedFluidSoftBody;
     }
 
     private void ApplySolidState()

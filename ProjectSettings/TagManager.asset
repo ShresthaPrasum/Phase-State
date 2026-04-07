@@ -42,8 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
+  - name: Tunnel
+    uniqueID: 761886281
+    locked: 0
+  - name: Player
     uniqueID: 1528787595
+    locked: 0
+  - name: Obstacles
+    uniqueID: 2980181321
+    locked: 0
+  - name: background
+    uniqueID: 2119967485
     locked: 0
   m_RenderingLayers:
   - Default
