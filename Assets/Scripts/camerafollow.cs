@@ -26,6 +26,7 @@ public class CameraFollow2D : MonoBehaviour
     private Vector3 velocity;
     private float cameraZ;
     private Rigidbody2D targetRigidbody;
+    private PlayerInstabilityController playerController;
 
     private void Awake()
     {
@@ -36,11 +37,8 @@ public class CameraFollow2D : MonoBehaviour
     {
         if (target == null && autoFindPlayerOnStart)
         {
-            PlayerInstabilityController player = FindFirstObjectByType<PlayerInstabilityController>();
-            if (player != null)
-            {
-                target = player.transform;
-            }
+            playerController = FindFirstObjectByType<PlayerInstabilityController>();
+            RefreshTargetFromController();
         }
 
         CacheTargetRigidbody();
@@ -48,6 +46,8 @@ public class CameraFollow2D : MonoBehaviour
 
     private void LateUpdate()
     {
+        RefreshTargetFromController();
+
         if (target == null)
         {
             return;
@@ -153,6 +153,26 @@ public class CameraFollow2D : MonoBehaviour
     private void CacheTargetRigidbody()
     {
         targetRigidbody = target != null ? target.GetComponent<Rigidbody2D>() : null;
+    }
+
+    private void RefreshTargetFromController()
+    {
+        if (playerController == null)
+        {
+            playerController = FindFirstObjectByType<PlayerInstabilityController>();
+        }
+
+        if (playerController == null)
+        {
+            return;
+        }
+
+        Transform followTarget = playerController.GetCameraFollowTarget();
+        if (followTarget != null && followTarget != target)
+        {
+            target = followTarget;
+            CacheTargetRigidbody();
+        }
     }
 
     public void SetTarget(Transform newTarget)

@@ -31,6 +31,7 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private float liquidMass = 1f;
     [SerializeField] private float liquidFriction = 0.2f;
     [SerializeField] private float liquidGravityScale = 0.7f;
+    [SerializeField] private float liquidExtraFallForce = 8f;
     [SerializeField] private float liquidJumpForce = 4f;
     [SerializeField] private LayerMask liquidCollisionMask = ~0;
 
@@ -55,6 +56,13 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private LayerMask groundLayers = -1;
     [SerializeField] private float groundCheckExtraDistance = 0.08f;
 
+    [Header("Instability HUD")]
+    [SerializeField] private bool showInstabilityHud = true;
+    [SerializeField] private Vector2 hudAnchor = new Vector2(20f, 20f);
+    [SerializeField] private Vector2 hudSize = new Vector2(260f, 20f);
+    [SerializeField] private float hudScale = 1f;
+    [SerializeField] private int hudFontSize = 14;
+
     private PhaseState currentState = PhaseState.Solid;
     private float instabilityValue = 0f;
     private float coyoteCounter = 0f;
@@ -73,17 +81,22 @@ public class PlayerInstabilityController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector3[] extraFlipRendererBasePositions;
+    private GUIStyle hudLabelStyle;
 
     [Header("Animation")]
     [SerializeField] private string speedParameterName = "speed";
 
     [Header("Mode Presentation")]
     [SerializeField] private GameObject solidVisualRoot;
+    [SerializeField] private Transform solidPresentationTransform;
     [SerializeField] private Collider2D[] solidOnlyColliders;
     [SerializeField] private GameObject fluidPlayerRoot;
+    [SerializeField] private Transform fluidPresentationTransform;
+    [SerializeField] private Rigidbody2D fluidPresentationRigidbody;
     [SerializeField] private bool useFluidPresentationForLiquid = true;
     [SerializeField] private bool useFluidPresentationForGas = false;
     private SoftBodyGenerator cachedFluidSoftBody;
+    private bool isLiquidFrozenFromGasTransition = false;
 
     private const float GROUND_CHECK_DISTANCE = 0.1f;
     private const string PLAYER_LAYER_NAME = "Player";
@@ -115,6 +128,12 @@ public class PlayerInstabilityController : MonoBehaviour
             return;
         }
 
+        if (fluidPresentationRigidbody == rb)
+        {
+            Debug.LogWarning("[PlayerInstabilityController] fluidPresentationRigidbody points to the solid/core rb. Clear it and assign the fluid body's Rigidbody2D instead.");
+            fluidPresentationRigidbody = null;
+        }
+
         ApplyPhaseState(PhaseState.Solid);
         ApplyModePresentation(currentState);
     }
@@ -133,7 +152,8 @@ public class PlayerInstabilityController : MonoBehaviour
         if (stunCounter > 0) return;
 
         ApplyMovement();
-        SyncFluidPresentationTransform();
+        ApplyLiquidFallAcceleration();
+        EnsureFluidIsSelfDriven();
     }
 
     private void HandleInput()
@@ -157,10 +177,6 @@ public class PlayerInstabilityController : MonoBehaviour
         }
 
         moveInput = new Vector2(horizontalInput, 0);
-        if (Mathf.Abs(horizontalInput) > 0)
-        {
-            Debug.Log($"[DEBUG] HandleInput: moveInput set to {moveInput}, currentState={currentState}");
-        }
         UpdateVisualsAndAnimator();
 
         if (currentState == PhaseState.Solid && (Keyboard.current[Key.Space].wasPressedThisFrame || Keyboard.current[Key.W].wasPressedThisFrame))
@@ -235,9 +251,25 @@ public class PlayerInstabilityController : MonoBehaviour
     {
         if (currentState == newState) return;
 
+        PhaseState oldState = currentState;
+        Vector2 handoffPosition = ReadActivePresentationPosition(oldState);
+
         currentState = newState;
         ApplyPhaseState(newState);
         ApplyModePresentation(newState);
+        ApplyTransitionPosition(newState, handoffPosition);
+
+        // Freeze liquid movement if transitioning from Gas to Liquid
+        if (oldState == PhaseState.Gas && newState == PhaseState.Liquid)
+        {
+            isLiquidFrozenFromGasTransition = true;
+            SoftBodyGenerator softBody = GetFluidSoftBody();
+            if (softBody != null)
+            {
+                softBody.FreezeHorizontalMovement();
+            }
+        }
+
         OnStateChanged?.Invoke(newState);
 
         Debug.Log($"[Phase State] Transitioned to: {newState} | Instability: {instabilityValue:F1}%");
@@ -263,10 +295,6 @@ public class PlayerInstabilityController : MonoBehaviour
     {
         bool useFluid = (state == PhaseState.Liquid && useFluidPresentationForLiquid) ||
                         (state == PhaseState.Gas && useFluidPresentationForGas);
-        Vector3 exactPlayerPosition = rb != null ? (Vector3)rb.position : transform.position;
-        SoftBodyGenerator softBody = GetFluidSoftBody();
-
-        Debug.Log($"[DEBUG] ApplyModePresentation: useFluid={useFluid}, softBody={softBody}, fluidPlayerRoot={fluidPlayerRoot}");
 
         if (solidVisualRoot != null)
         {
@@ -287,37 +315,142 @@ public class PlayerInstabilityController : MonoBehaviour
         if (fluidPlayerRoot != null)
         {
             fluidPlayerRoot.SetActive(useFluid);
-            if (useFluid)
-            {
-                fluidPlayerRoot.transform.position = exactPlayerPosition;
-                if (softBody != null)
-                {
-                    softBody.SnapToPosition(exactPlayerPosition, true);
-                    // Let the fluid player control itself with keyboard
-                }
-            }
-            else if (softBody != null)
+            SoftBodyGenerator softBody = GetFluidSoftBody();
+            if (!useFluid && softBody != null)
             {
                 softBody.ClearExternalFollowTarget();
             }
         }
     }
 
-    private void SyncFluidPresentationTransform()
+    private void EnsureFluidIsSelfDriven()
     {
         if (fluidPlayerRoot != null && fluidPlayerRoot.activeSelf)
         {
-            Vector3 exactPlayerPosition = rb != null ? (Vector3)rb.position : transform.position;
             SoftBodyGenerator softBody = GetFluidSoftBody();
             if (softBody != null)
             {
-                // Don't use external follow - let the fluid player control itself with keyboard
                 softBody.ClearExternalFollowTarget();
             }
-            else
+        }
+    }
+
+    private bool IsFluidPresentationState(PhaseState state)
+    {
+        return (state == PhaseState.Liquid && useFluidPresentationForLiquid) ||
+               (state == PhaseState.Gas && useFluidPresentationForGas);
+    }
+
+    private Vector2 ReadActivePresentationPosition(PhaseState state)
+    {
+        if (IsFluidPresentationState(state))
+        {
+            SoftBodyGenerator softBody = GetFluidSoftBody();
+            return GetCurrentFluidPosition(softBody);
+        }
+
+        return GetCurrentSolidPosition();
+    }
+
+    private void ApplyTransitionPosition(PhaseState newState, Vector2 handoffPosition)
+    {
+        SetSolidPosition(handoffPosition, true);
+
+        if (IsFluidPresentationState(newState))
+        {
+            SetFluidPosition(handoffPosition, true);
+        }
+    }
+
+    private Vector2 GetCurrentSolidPosition()
+    {
+        return rb != null ? rb.position : (Vector2)transform.position;
+    }
+
+    private void SetSolidPosition(Vector2 position, bool resetVelocity)
+    {
+        if (rb != null)
+        {
+            rb.position = position;
+            if (resetVelocity)
             {
-                fluidPlayerRoot.transform.position = exactPlayerPosition;
+                rb.linearVelocity = Vector2.zero;
+                rb.angularVelocity = 0f;
             }
+        }
+    }
+
+    private Vector2 GetCurrentFluidPosition(SoftBodyGenerator softBody)
+    {
+        if (fluidPresentationTransform != null)
+        {
+            return fluidPresentationTransform.position;
+        }
+
+        if (fluidPresentationRigidbody != null)
+        {
+            return fluidPresentationRigidbody.position;
+        }
+
+        if (softBody != null)
+        {
+            return softBody.GetCenterPosition();
+        }
+
+        if (fluidPlayerRoot != null)
+        {
+            Rigidbody2D rootRb = fluidPlayerRoot.GetComponent<Rigidbody2D>();
+            if (rootRb != null && rootRb != rb)
+            {
+                return rootRb.position;
+            }
+
+            Rigidbody2D[] childRigidbodies = fluidPlayerRoot.GetComponentsInChildren<Rigidbody2D>(true);
+            for (int i = 0; i < childRigidbodies.Length; i++)
+            {
+                if (childRigidbodies[i] != null && childRigidbodies[i] != rb)
+                {
+                    return childRigidbodies[i].position;
+                }
+            }
+
+            return fluidPlayerRoot.transform.position;
+        }
+
+        Debug.LogError("[PlayerInstabilityController] Fluid position source is not assigned. Set fluidPresentationRigidbody or fluidPlayerRoot correctly in the Inspector.");
+        return rb != null ? rb.position : (Vector2)transform.position;
+    }
+
+    private void SetFluidPosition(Vector2 position, bool resetVelocity)
+    {
+        SoftBodyGenerator softBody = GetFluidSoftBody();
+        if (softBody != null)
+        {
+            softBody.SnapToPosition(position, resetVelocity);
+            softBody.ClearExternalFollowTarget();
+            return;
+        }
+
+        if (fluidPresentationRigidbody != null)
+        {
+            fluidPresentationRigidbody.position = position;
+            if (resetVelocity)
+            {
+                fluidPresentationRigidbody.linearVelocity = Vector2.zero;
+                fluidPresentationRigidbody.angularVelocity = 0f;
+            }
+            return;
+        }
+
+        if (fluidPresentationTransform != null)
+        {
+            fluidPresentationTransform.position = position;
+            return;
+        }
+
+        if (fluidPlayerRoot != null)
+        {
+            fluidPlayerRoot.transform.position = position;
         }
     }
 
@@ -361,6 +494,16 @@ public class PlayerInstabilityController : MonoBehaviour
         SafeIgnoreLayerCollision("Grates", false);
     }
 
+    private void ApplyLiquidFallAcceleration()
+    {
+        if (currentState != PhaseState.Liquid || rb == null)
+        {
+            return;
+        }
+
+        rb.AddForce(Vector2.down * liquidExtraFallForce, ForceMode2D.Force);
+    }
+
     private void ApplyGasState()
     {
         rb.mass = gasMass;
@@ -400,6 +543,12 @@ public class PlayerInstabilityController : MonoBehaviour
             targetVelocityX = 0f;
         }
 
+        // Disable horizontal movement if liquid is frozen from Gas transition
+        if (currentState == PhaseState.Liquid && isLiquidFrozenFromGasTransition)
+        {
+            targetVelocityX = 0f;
+        }
+
         rb.linearVelocity = new Vector2(targetVelocityX, rb.linearVelocity.y);
 
         if (jumpPressed && isGrounded)
@@ -425,22 +574,52 @@ public class PlayerInstabilityController : MonoBehaviour
 
     private void UpdateGroundedState()
     {
-        Vector2 rayOrigin = mainCollider != null
-            ? new Vector2(mainCollider.bounds.center.x, mainCollider.bounds.min.y + 0.01f)
-            : (Vector2)transform.position;
+        // Use SoftBodyGenerator's ground check when in Liquid state
+        if (currentState == PhaseState.Liquid)
+        {
+            SoftBodyGenerator softBody = GetFluidSoftBody();
+            if (softBody != null)
+            {
+                isGrounded = softBody.IsGrounded();
+                
+                // Debug: Log liquid ground state if frozen
+                if (isLiquidFrozenFromGasTransition)
+                {
+                    Debug.Log($"[Liquid Ground Check] isGrounded={isGrounded}, isFrozen={isLiquidFrozenFromGasTransition}");
+                }
+            }
+        }
+        else
+        {
+            Vector2 rayOrigin = mainCollider != null
+                ? new Vector2(mainCollider.bounds.center.x, mainCollider.bounds.min.y + 0.01f)
+                : (Vector2)transform.position;
 
-        float rayDistance = mainCollider != null
-            ? groundCheckExtraDistance
-            : GROUND_CHECK_DISTANCE;
+            float rayDistance = mainCollider != null
+                ? groundCheckExtraDistance
+                : GROUND_CHECK_DISTANCE;
 
-        RaycastHit2D hit = Physics2D.Raycast(
-            rayOrigin,
-            Vector2.down,
-            rayDistance,
-            groundLayers
-        );
+            RaycastHit2D hit = Physics2D.Raycast(
+                rayOrigin,
+                Vector2.down,
+                rayDistance,
+                groundLayers
+            );
 
-        isGrounded = hit.collider != null;
+            isGrounded = hit.collider != null;
+        }
+
+        // Unfreeze liquid movement when it touches the ground after Gas transition
+        if (isGrounded && currentState == PhaseState.Liquid && isLiquidFrozenFromGasTransition)
+        {
+            isLiquidFrozenFromGasTransition = false;
+            SoftBodyGenerator softBody = GetFluidSoftBody();
+            if (softBody != null)
+            {
+                softBody.UnfreezeHorizontalMovement();
+                Debug.Log("[Liquid Unlocked] Called UnfreezeHorizontalMovement()");
+            }
+        }
     }
 
     private void UpdateCoyoteTime()
@@ -503,6 +682,95 @@ public class PlayerInstabilityController : MonoBehaviour
     public float GetInstabilityValue() => instabilityValue;
     public bool IsStunned() => stunCounter > 0;
     public bool IsGrounded() => isGrounded;
+
+    public Transform GetCameraFollowTarget()
+    {
+        if (IsFluidPresentationState(currentState) && fluidPlayerRoot != null)
+        {
+            if (fluidPresentationTransform != null)
+            {
+                return fluidPresentationTransform;
+            }
+
+            if (fluidPresentationRigidbody != null)
+            {
+                return fluidPresentationRigidbody.transform;
+            }
+
+            SoftBodyGenerator softBody = GetFluidSoftBody();
+            if (softBody != null)
+            {
+                return softBody.transform;
+            }
+
+            return fluidPlayerRoot.transform;
+        }
+
+        if (solidPresentationTransform != null)
+        {
+            return solidPresentationTransform;
+        }
+
+        if (solidVisualRoot != null)
+        {
+            return solidVisualRoot.transform;
+        }
+
+        return transform;
+    }
+
+    private void OnGUI()
+    {
+        if (!showInstabilityHud)
+        {
+            return;
+        }
+
+        if (hudLabelStyle == null)
+        {
+            hudLabelStyle = new GUIStyle(GUI.skin.label)
+            {
+                richText = false,
+                alignment = TextAnchor.MiddleLeft
+            };
+        }
+
+        float scale = Mathf.Max(0.1f, hudScale);
+        hudLabelStyle.fontSize = Mathf.RoundToInt(hudFontSize * scale);
+        hudLabelStyle.normal.textColor = Color.black;
+
+        float x = hudAnchor.x;
+        float y = hudAnchor.y;
+        float width = Mathf.Max(1f, hudSize.x * scale);
+        float height = Mathf.Max(1f, hudSize.y * scale);
+        float percent = Mathf.Clamp01(GetInstabilityPercent() / 100f);
+        string labelText = "Instability: " + Mathf.RoundToInt(instabilityValue) + "% [" + currentState + "]";
+
+        float labelPadding = 6f * scale;
+        float labelHeight = Mathf.Max(
+            hudLabelStyle.CalcHeight(new GUIContent(labelText), width),
+            hudLabelStyle.fontSize + (4f * scale));
+        float labelY = y - labelPadding - labelHeight;
+
+        Rect labelRect = new Rect(x, labelY, width, labelHeight);
+        Rect bgRect = new Rect(x, y, width, height);
+        Rect fillRect = new Rect(x, y, width * percent, height);
+        Rect borderRect = new Rect(x - scale, y - scale, width + (2f * scale), height + (2f * scale));
+
+        GUI.color = new Color(0f, 0f, 0f, 0.75f);
+        GUI.DrawTexture(borderRect, Texture2D.whiteTexture);
+
+        GUI.color = new Color(0.12f, 0.12f, 0.12f, 0.95f);
+        GUI.DrawTexture(bgRect, Texture2D.whiteTexture);
+
+        Color low = new Color(0.20f, 0.85f, 0.35f, 1f);
+        Color high = new Color(0.95f, 0.15f, 0.15f, 1f);
+        GUI.color = Color.Lerp(low, high, percent);
+        GUI.DrawTexture(fillRect, Texture2D.whiteTexture);
+
+        GUI.color = Color.black;
+        GUI.Label(labelRect, labelText, hudLabelStyle);
+    }
 
     private void OnDrawGizmosSelected()
     {

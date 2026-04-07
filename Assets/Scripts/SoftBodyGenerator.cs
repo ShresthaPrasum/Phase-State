@@ -51,6 +51,7 @@ public class SoftBodyGenerator : MonoBehaviour
     private bool hasInitialized;
     private bool externalFollowEnabled;
     private Vector2 externalFollowTarget;
+    private bool isHorizontalMovementFrozen = false;
 
     private void Start()
     {
@@ -162,7 +163,26 @@ public class SoftBodyGenerator : MonoBehaviour
         if (enableKeyboardControl && !externalFollowEnabled)
         {
             Vector2 targetPosition = centerRb.position + (moveInput * moveSpeed * Time.fixedDeltaTime);
+            
+            // If horizontal movement is frozen, only apply vertical position
+            if (isHorizontalMovementFrozen)
+            {
+                targetPosition.x = centerRb.position.x;
+            }
+            
             centerRb.MovePosition(targetPosition);
+            
+            // Freeze horizontal velocity on all bones when frozen
+            if (isHorizontalMovementFrozen)
+            {
+                for (int i = 0; i < boneRigidbodies.Length; i++)
+                {
+                    if (boneRigidbodies[i] != null)
+                    {
+                        boneRigidbodies[i].linearVelocity = new Vector2(0f, boneRigidbodies[i].linearVelocity.y);
+                    }
+                }
+            }
 
             if (jumpRequested && isGrounded)
             {
@@ -363,6 +383,16 @@ public class SoftBodyGenerator : MonoBehaviour
         return positions;
     }
 
+    public Vector2 GetCenterPosition()
+    {
+        if (centerRb != null)
+        {
+            return centerRb.position;
+        }
+
+        return transform.position;
+    }
+
     public GameObject GetBone(int index)
     {
         if (index >= 0 && index < bones.Length)
@@ -428,6 +458,37 @@ public class SoftBodyGenerator : MonoBehaviour
         {
             centerRb.bodyType = RigidbodyType2D.Dynamic;
         }
+    }
+
+    public void FreezeHorizontalMovement()
+    {
+        isHorizontalMovementFrozen = true;
+        Debug.Log("[SoftBody] FREEZING horizontal movement");
+
+        // Immediately stop horizontal motion on center and all bones
+        if (centerRb != null)
+        {
+            centerRb.linearVelocity = new Vector2(0f, centerRb.linearVelocity.y);
+        }
+
+        for (int i = 0; i < boneRigidbodies.Length; i++)
+        {
+            if (boneRigidbodies[i] != null)
+            {
+                boneRigidbodies[i].linearVelocity = new Vector2(0f, boneRigidbodies[i].linearVelocity.y);
+            }
+        }
+    }
+
+    public void UnfreezeHorizontalMovement()
+    {
+        isHorizontalMovementFrozen = false;
+        Debug.Log("[SoftBody] UNFREEZING horizontal movement - moveInput=" + moveInput);
+    }
+
+    public bool IsGrounded()
+    {
+        return isGrounded;
     }
 
     private void SetBonesActive(bool active)
