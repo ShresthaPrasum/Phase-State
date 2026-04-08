@@ -76,6 +76,11 @@ public class KillerOnTouch : MonoBehaviour
             return;
         }
 
+        if (controller.GetCurrentState() != PlayerInstabilityController.PhaseState.Solid)
+        {
+            return;
+        }
+
         cooldownTimer = touchCooldown;
         controller.TeleportToCheckpoint();
     }

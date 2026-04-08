@@ -22,11 +22,13 @@ public class ObjectMoveOnTouch : MonoBehaviour
 	[SerializeField] private TouchAction action = TouchAction.MoveObject;
 
 	[Header("Move Settings")]
+	[SerializeField] private Transform moveTarget;
 	[SerializeField] private Vector3 moveOffset = new Vector3(0f, 3f, 0f);
 	[SerializeField] private float moveSpeed = 3f;
 	[SerializeField] private bool moveInLocalSpace = false;
 	[SerializeField] private bool moveOnce = true;
 	[SerializeField] private bool loopMovement = false;
+	[SerializeField] private bool moveForeverAfterFirstTouch = true;
 
 	[Header("Toggle Settings")]
 	[SerializeField] private GameObject targetObject;
@@ -44,20 +46,26 @@ public class ObjectMoveOnTouch : MonoBehaviour
 	private bool hasMoved;
 	private bool isMoving;
 	private bool movingToPositive;
+	private bool foreverMovementStarted;
+	private Transform resolvedMoveTarget;
 
 	private void Awake()
 	{
-		startPosition = transform.position;
-		worldMoveOffset = moveInLocalSpace ? transform.TransformVector(moveOffset) : moveOffset;
-		positiveLoopPosition = startPosition + worldMoveOffset;
-		negativeLoopPosition = startPosition - worldMoveOffset;
-		targetPosition = positiveLoopPosition;
-		movingToPositive = true;
-
 		if (targetObject == null)
 		{
 			targetObject = gameObject;
 		}
+
+		resolvedMoveTarget = moveTarget != null
+			? moveTarget
+			: (targetObject != null ? targetObject.transform : transform);
+
+		startPosition = resolvedMoveTarget.position;
+		worldMoveOffset = moveInLocalSpace ? resolvedMoveTarget.TransformVector(moveOffset) : moveOffset;
+		positiveLoopPosition = startPosition + worldMoveOffset;
+		negativeLoopPosition = startPosition - worldMoveOffset;
+		targetPosition = positiveLoopPosition;
+		movingToPositive = true;
 	}
 
 	private void Update()
@@ -67,13 +75,19 @@ public class ObjectMoveOnTouch : MonoBehaviour
 			return;
 		}
 
-		transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-
-		if ((transform.position - targetPosition).sqrMagnitude <= 0.0001f)
+		if (resolvedMoveTarget == null)
 		{
-			transform.position = targetPosition;
+			isMoving = false;
+			return;
+		}
 
-			if (action == TouchAction.MoveObject && loopMovement)
+		resolvedMoveTarget.position = Vector3.MoveTowards(resolvedMoveTarget.position, targetPosition, moveSpeed * Time.deltaTime);
+
+		if ((resolvedMoveTarget.position - targetPosition).sqrMagnitude <= 0.0001f)
+		{
+			resolvedMoveTarget.position = targetPosition;
+
+			if (action == TouchAction.MoveObject && (loopMovement || foreverMovementStarted))
 			{
 				if (movingToPositive)
 				{
@@ -126,6 +140,11 @@ public class ObjectMoveOnTouch : MonoBehaviour
 			return;
 		}
 
+		if (moveForeverAfterFirstTouch && foreverMovementStarted)
+		{
+			return;
+		}
+
 		if (IsPlayer(other.gameObject))
 		{
 			ResetAction();
@@ -135,6 +154,11 @@ public class ObjectMoveOnTouch : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D other)
 	{
 		if (!resetOnPlayerExit)
+		{
+			return;
+		}
+
+		if (moveForeverAfterFirstTouch && foreverMovementStarted)
 		{
 			return;
 		}
@@ -154,9 +178,23 @@ public class ObjectMoveOnTouch : MonoBehaviour
 
 		if (action == TouchAction.MoveObject)
 		{
-			worldMoveOffset = moveInLocalSpace ? transform.TransformVector(moveOffset) : moveOffset;
+			if (resolvedMoveTarget == null)
+			{
+				return;
+			}
+
+			worldMoveOffset = moveInLocalSpace ? resolvedMoveTarget.TransformVector(moveOffset) : moveOffset;
 			positiveLoopPosition = startPosition + worldMoveOffset;
 			negativeLoopPosition = startPosition - worldMoveOffset;
+
+			if (moveForeverAfterFirstTouch)
+			{
+				foreverMovementStarted = true;
+				targetPosition = positiveLoopPosition;
+				movingToPositive = true;
+				isMoving = true;
+				return;
+			}
 
 			if (loopMovement)
 			{
@@ -225,10 +263,14 @@ public class ObjectMoveOnTouch : MonoBehaviour
 	{
 		if (action == TouchAction.MoveObject)
 		{
-			transform.position = startPosition;
+			if (resolvedMoveTarget != null)
+			{
+				resolvedMoveTarget.position = startPosition;
+			}
 			targetPosition = positiveLoopPosition;
 			movingToPositive = true;
 			hasMoved = false;
+			foreverMovementStarted = false;
 			isMoving = false;
 		}
 	}
