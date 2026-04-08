@@ -60,6 +60,7 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private float coyoteTime = 0.1f;
     [SerializeField] private LayerMask groundLayers = -1;
     [SerializeField] private float groundCheckExtraDistance = 0.08f;
+    [SerializeField, Range(0f, 1f)] private float minGroundNormalY = 0.5f;
 
     [Header("Respawn")]
     [SerializeField] private Key manualRespawnKey = Key.R;
@@ -80,6 +81,7 @@ public class PlayerInstabilityController : MonoBehaviour
     private bool isGrounded = false;
     private bool jumpPressed = false;
     private int gasSwitchesRemaining;
+    private readonly RaycastHit2D[] groundCastHits = new RaycastHit2D[8];
 
     [Header("Visual References")]
     [SerializeField] private SpriteRenderer playerBodySpriteRenderer;
@@ -87,10 +89,13 @@ public class PlayerInstabilityController : MonoBehaviour
     [SerializeField] private float trailOffsetX = 0.15f;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private bool flipPlayerBodySprite = false;
+    [SerializeField] private Color gasTintColor = new Color(0.55f, 0.85f, 1f, 1f);
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector3[] extraFlipRendererBasePositions;
+    private Color spriteRendererBaseColor = Color.white;
+    private Color[] extraFlipRendererBaseColors;
     private GUIStyle hudLabelStyle;
 
     [Header("Animation")]
@@ -123,12 +128,21 @@ public class PlayerInstabilityController : MonoBehaviour
         if (extraFlipRenderers != null && extraFlipRenderers.Length > 0)
         {
             extraFlipRendererBasePositions = new Vector3[extraFlipRenderers.Length];
+            extraFlipRendererBaseColors = new Color[extraFlipRenderers.Length];
             for (int i = 0; i < extraFlipRenderers.Length; i++)
             {
                 extraFlipRendererBasePositions[i] = extraFlipRenderers[i] != null
                     ? extraFlipRenderers[i].transform.localPosition
                     : Vector3.zero;
+                extraFlipRendererBaseColors[i] = extraFlipRenderers[i] != null
+                    ? extraFlipRenderers[i].color
+                    : Color.white;
             }
+        }
+
+        if (spriteRenderer != null)
+        {
+            spriteRendererBaseColor = spriteRenderer.color;
         }
 
         if (rb == null || mainCollider == null)
@@ -451,12 +465,14 @@ public class PlayerInstabilityController : MonoBehaviour
 
     private void SetFluidPosition(Vector2 position, bool resetVelocity)
     {
-        SoftBodyGenerator softBody = GetFluidSoftBody();
-        if (softBody != null)
+        if (fluidPlayerRoot != null)
         {
-            softBody.SnapToPosition(position, resetVelocity);
-            softBody.ClearExternalFollowTarget();
-            return;
+            fluidPlayerRoot.transform.position = position;
+        }
+
+        if (fluidPresentationTransform != null)
+        {
+            fluidPresentationTransform.position = position;
         }
 
         if (fluidPresentationRigidbody != null)
@@ -467,18 +483,14 @@ public class PlayerInstabilityController : MonoBehaviour
                 fluidPresentationRigidbody.linearVelocity = Vector2.zero;
                 fluidPresentationRigidbody.angularVelocity = 0f;
             }
-            return;
         }
 
-        if (fluidPresentationTransform != null)
+        SoftBodyGenerator softBody = GetFluidSoftBody();
+        if (softBody != null)
         {
-            fluidPresentationTransform.position = position;
+            softBody.SnapToPosition(position, resetVelocity);
+            softBody.ClearExternalFollowTarget();
             return;
-        }
-
-        if (fluidPlayerRoot != null)
-        {
-            fluidPlayerRoot.transform.position = position;
         }
     }
 
@@ -509,6 +521,8 @@ public class PlayerInstabilityController : MonoBehaviour
         rb.gravityScale = solidGravityScale;
         mainCollider.isTrigger = false;
 
+        ApplyVisualTint(spriteRendererBaseColor);
+
         SafeIgnoreLayerCollision("Grates", false);
     }
 
@@ -518,6 +532,8 @@ public class PlayerInstabilityController : MonoBehaviour
         rb.linearDamping = liquidFriction;
         rb.gravityScale = liquidGravityScale;
         mainCollider.isTrigger = false;
+
+        ApplyVisualTint(spriteRendererBaseColor);
 
         SafeIgnoreLayerCollision("Grates", false);
     }
@@ -540,7 +556,28 @@ public class PlayerInstabilityController : MonoBehaviour
         mainCollider.isTrigger = false;
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
 
+        ApplyVisualTint(gasTintColor);
+
         SafeIgnoreLayerCollision("Grates", true);
+    }
+
+    private void ApplyVisualTint(Color tintColor)
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = tintColor;
+        }
+
+        if (extraFlipRenderers != null)
+        {
+            for (int i = 0; i < extraFlipRenderers.Length; i++)
+            {
+                if (extraFlipRenderers[i] != null)
+                {
+                    extraFlipRenderers[i].color = tintColor;
+                }
+            }
+        }
     }
 
     private void SafeIgnoreLayerCollision(string otherLayerName, bool ignore)
@@ -619,22 +656,31 @@ public class PlayerInstabilityController : MonoBehaviour
         }
         else
         {
-            Vector2 rayOrigin = mainCollider != null
-                ? new Vector2(mainCollider.bounds.center.x, mainCollider.bounds.min.y + 0.01f)
-                : (Vector2)transform.position;
+            isGrounded = false;
 
-            float rayDistance = mainCollider != null
-                ? groundCheckExtraDistance
-                : GROUND_CHECK_DISTANCE;
+            if (mainCollider != null)
+            {
+                ContactFilter2D filter = new ContactFilter2D();
+                filter.useLayerMask = false;
+                filter.useTriggers = false;
 
-            RaycastHit2D hit = Physics2D.Raycast(
-                rayOrigin,
-                Vector2.down,
-                rayDistance,
-                groundLayers
-            );
-
-            isGrounded = hit.collider != null;
+                int hitCount = mainCollider.Cast(Vector2.down, filter, groundCastHits, groundCheckExtraDistance + 0.02f);
+                for (int i = 0; i < hitCount; i++)
+                {
+                    RaycastHit2D hit = groundCastHits[i];
+                    if (hit.collider != null && !hit.collider.isTrigger && hit.normal.y >= minGroundNormalY)
+                    {
+                        isGrounded = true;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Vector2 rayOrigin = transform.position;
+                RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, GROUND_CHECK_DISTANCE);
+                isGrounded = hit.collider != null && !hit.collider.isTrigger && hit.normal.y >= minGroundNormalY;
+            }
         }
 
         // Unfreeze liquid movement when it touches the ground after Gas transition
@@ -777,6 +823,9 @@ public class PlayerInstabilityController : MonoBehaviour
         float height = Mathf.Max(1f, hudSize.y * scale);
         float percent = Mathf.Clamp01(GetInstabilityPercent() / 100f);
         string labelText = "Instability: " + Mathf.RoundToInt(instabilityValue) + "% [" + currentState + "]";
+        string gasText = limitGasSwitches
+            ? ("Gas Uses: " + gasSwitchesRemaining + "/" + maxGasSwitches)
+            : "Gas Uses: Infinite";
 
         float labelPadding = 6f * scale;
         float labelHeight = Mathf.Max(
@@ -785,6 +834,7 @@ public class PlayerInstabilityController : MonoBehaviour
         float labelY = y - labelPadding - labelHeight;
 
         Rect labelRect = new Rect(x, labelY, width, labelHeight);
+        Rect gasRect = new Rect(x, y + height + labelPadding, width, hudLabelStyle.fontSize + (4f * scale));
         Rect bgRect = new Rect(x, y, width, height);
         Rect fillRect = new Rect(x, y, width * percent, height);
         Rect borderRect = new Rect(x - scale, y - scale, width + (2f * scale), height + (2f * scale));
@@ -802,6 +852,7 @@ public class PlayerInstabilityController : MonoBehaviour
 
         GUI.color = Color.black;
         GUI.Label(labelRect, labelText, hudLabelStyle);
+        GUI.Label(gasRect, gasText, hudLabelStyle);
     }
 
     private void OnDrawGizmosSelected()
@@ -832,11 +883,12 @@ public class PlayerInstabilityController : MonoBehaviour
         TransitionToState(PhaseState.Solid);
     }
 
-    private void TeleportToCheckpoint()
+    public void TeleportToCheckpoint()
     {
         if (checkpointTransform == null)
         {
             Debug.LogWarning("[PlayerInstabilityController] Manual respawn requested, but checkpointTransform is not assigned.");
+            ResetPlayer();
             return;
         }
 

@@ -16,6 +16,7 @@ public class ObjectMoveOnTouch : MonoBehaviour
 
 	[Header("Touch Filter")]
 	[SerializeField] private string playerTag = "Player";
+	[SerializeField] private bool allowParentTagCheck = true;
 
 	[Header("Action")]
 	[SerializeField] private TouchAction action = TouchAction.MoveObject;
@@ -191,7 +192,33 @@ public class ObjectMoveOnTouch : MonoBehaviour
 
 	private bool IsPlayer(GameObject candidate)
 	{
-		return candidate != null && candidate.CompareTag(playerTag);
+		if (candidate == null)
+		{
+			return false;
+		}
+
+		if (candidate.CompareTag(playerTag))
+		{
+			return true;
+		}
+
+		if (!allowParentTagCheck)
+		{
+			return false;
+		}
+
+		Transform current = candidate.transform.parent;
+		while (current != null)
+		{
+			if (current.CompareTag(playerTag))
+			{
+				return true;
+			}
+
+			current = current.parent;
+		}
+
+		return false;
 	}
 
 	private void ResetAction()

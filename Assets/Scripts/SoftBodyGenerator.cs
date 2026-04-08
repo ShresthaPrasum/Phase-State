@@ -34,6 +34,7 @@ public class SoftBodyGenerator : MonoBehaviour
     [SerializeField] private LayerMask boneLayer;
     [SerializeField] private LayerMask groundLayers = -1;
     [SerializeField] private float groundCheckDistance = 0.08f;
+    [SerializeField, Range(0f, 1f)] private float minGroundNormalY = 0.5f;
 
     [Header("Controls")]
     [SerializeField] private bool enableKeyboardControl = true;
@@ -42,6 +43,7 @@ public class SoftBodyGenerator : MonoBehaviour
     
     private GameObject[] bones;
     private Rigidbody2D[] boneRigidbodies;
+    private CircleCollider2D[] boneColliders;
     private Rigidbody2D centerRb;
     private Vector3[] boneOffsets;
     private Vector2 moveInput;
@@ -52,6 +54,7 @@ public class SoftBodyGenerator : MonoBehaviour
     private bool externalFollowEnabled;
     private Vector2 externalFollowTarget;
     private bool isHorizontalMovementFrozen = false;
+    private readonly RaycastHit2D[] groundCastHits = new RaycastHit2D[8];
 
     private void Start()
     {
@@ -64,6 +67,7 @@ public class SoftBodyGenerator : MonoBehaviour
 
         bones = new GameObject[boneCount];
         boneRigidbodies = new Rigidbody2D[boneCount];
+        boneColliders = new CircleCollider2D[boneCount];
         boneOffsets = new Vector3[boneCount];
 
         for (int i = 0; i < boneCount; i++)
@@ -207,32 +211,35 @@ public class SoftBodyGenerator : MonoBehaviour
 
     private void UpdateGroundedState()
     {
-        if (boneRigidbodies == null || boneRigidbodies.Length == 0)
+        if (boneColliders == null || boneColliders.Length == 0)
         {
             isGrounded = false;
             return;
         }
 
-        float lowestY = float.MaxValue;
-        Vector2 lowestPoint = centerRb.position;
+        isGrounded = false;
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.useLayerMask = false;
+        filter.useTriggers = false;
 
-        for (int i = 0; i < boneRigidbodies.Length; i++)
+        for (int i = 0; i < boneColliders.Length; i++)
         {
-            if (boneRigidbodies[i] == null)
+            if (boneColliders[i] == null)
             {
                 continue;
             }
 
-            float candidateY = boneRigidbodies[i].position.y - boneCircleRadius;
-            if (candidateY < lowestY)
+            int hitCount = boneColliders[i].Cast(Vector2.down, filter, groundCastHits, groundCheckDistance + 0.02f);
+            for (int h = 0; h < hitCount; h++)
             {
-                lowestY = candidateY;
-                lowestPoint = new Vector2(boneRigidbodies[i].position.x, candidateY + 0.01f);
+                RaycastHit2D hit = groundCastHits[h];
+                if (hit.collider != null && !hit.collider.isTrigger && hit.normal.y >= minGroundNormalY)
+                {
+                    isGrounded = true;
+                    return;
+                }
             }
         }
-
-        RaycastHit2D hit = Physics2D.Raycast(lowestPoint, Vector2.down, groundCheckDistance, groundLayers);
-        isGrounded = hit.collider != null;
     }
 
     private void SetupPerimeterSprings()
@@ -323,6 +330,7 @@ public class SoftBodyGenerator : MonoBehaviour
             circleCollider = bone.AddComponent<CircleCollider2D>();
         }
         circleCollider.radius = boneCircleRadius;
+        boneColliders[index] = circleCollider;
 
         PhysicsMaterial2D material = new PhysicsMaterial2D
         {

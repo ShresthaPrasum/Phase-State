@@ -20,7 +20,7 @@ public class MainMenu: MonoBehaviour
     }
     public void OpenLevels()
     {
-        SceneManager.LoadScene("LevelSelect");
+        SceneManager.LoadScene("LevelMenu");
     }
     public void Guide()
     {
