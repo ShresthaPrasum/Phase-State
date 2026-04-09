@@ -1,6 +1,6 @@
 # Phase-State
 
-2d platformer puzzle game where you are a matter which can change it's state between(Solid, Liquid and Gas)
+2d platformer puzzle game where you are a matter which can change its state between(Solid, Liquid and Gas)
 
 ## CONTROLS
 - Move: A / D
@@ -18,20 +18,27 @@
     - Can trigger touch me object and portals
 
 - Liquid:
-	- Useful for flowing through small gap.
+	- Useful for flowing through a small gap.
 	- Not killed by spikes.
-   	- Can't trigger touch me object.
+   	- Can't trigger the touch me object.
 
 - Gas:
 	- Floats.
 	- Not killed by spikes.
-	- Gas uses may be limited depending on level settings.
+	- Gas use may be limited depending on the level settings.
 
 ## Killers
 - Killer/Spike objects: kill only when you are Solid.
 - Evaporator objects: kill only when you are Liquid.
 
+# AI USAGE
+- Used on fluid player mechanics, it was impossible to make it with my own knowledge only!!
+- Used on some bug fixes!
+- There were literally no assets used; everything was made by blocks and shapes
+- Used on the game guide, I was kinda bored as hell
+- AI was used for less than 10% of this project! The other 90% was purely handmade
+
 ## Made by Prasum Shrestha
 
 ## Demo Link
-[...](https://shresthaprasum.itch.io/phase-state)
+[PHASE_STATE ITCH.IO](https://shresthaprasum.itch.io/phase-state)
