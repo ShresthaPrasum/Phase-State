@@ -15,10 +15,12 @@
 - Solid:
 	- Best for normal movement and jumping.
 	- Spikes are deadly in this form.
+    - Can trigger touch me object and portals
 
 - Liquid:
 	- Useful for flowing through small gap.
 	- Not killed by spikes.
+   	- Can't trigger touch me object.
 
 - Gas:
 	- Floats.
